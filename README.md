@@ -1,31 +1,32 @@
 # Consistency-Latency-Tradeoff
 Experiment of the Consistency-Latency Tradeoff Algorithm.
 
-##Cassandra 配置
+## Cassandra 配置
 
-##YCSB 配置
+
+## YCSB 配置
 
 ### Workload层
 
 ...
 
-###DB层
+### DB层
 
 1. 更改DB类：
 
 2. 实现读写算法：实现基于Quorum的1/2轮通信的读写算法，即：重写 READ/UPDATE(for existed key)/INSERT(for new key)方法。
 
-   ####2-round Read algorithm:
+   #### 2-round Read algorithm:
 
    > When reading data in the first round , read the responding timestamp at the same time. 
    >
    > Write back the value with the timestamp to a quorum of replicas.
 
-   ####1-round Read algorithm:
+   #### 1-round Read algorithm:
 
    > Reading data from a quorum of replicas.
 
-   ####2-round Write algorithm:
+   #### 2-round Write algorithm:
 
    > Ask for a quorum of timestamp in the first round. 
    >
@@ -33,7 +34,7 @@ Experiment of the Consistency-Latency Tradeoff Algorithm.
    >
    > Update value with the new timestamp to a quorum of replicas.
 
-   ####1-round Write algorithm:
+   #### 1-round Write algorithm:
 
    > local ver++.
    >
