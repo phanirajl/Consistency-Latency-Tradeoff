@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/src/cassandra.iml" filepath="$PROJECT_DIR$/src/cassandra.iml" />
+      <module fileurl="file://$PROJECT_DIR$/examples/hadoop_cql3_word_count/hadoop_cql3_word_count.iml" filepath="$PROJECT_DIR$/examples/hadoop_cql3_word_count/hadoop_cql3_word_count.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tools/stress/stress.iml" filepath="$PROJECT_DIR$/tools/stress/stress.iml" />
+      <module fileurl="file://$PROJECT_DIR$/build/test/test.iml" filepath="$PROJECT_DIR$/build/test/test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/test/test1.iml" filepath="$PROJECT_DIR$/test/test1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/interface/thrift/thrift.iml" filepath="$PROJECT_DIR$/interface/thrift/thrift.iml" />
+      <module fileurl="file://$PROJECT_DIR$/examples/triggers/triggers.iml" filepath="$PROJECT_DIR$/examples/triggers/triggers.iml" />
+    </modules>
+  </component>
+</project>

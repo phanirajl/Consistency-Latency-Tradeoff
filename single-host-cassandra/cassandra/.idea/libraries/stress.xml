@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="stress">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/build/tools/lib/stress.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

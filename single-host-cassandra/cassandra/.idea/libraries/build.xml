@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="build">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/build/apache-cassandra-thrift-3.7-SNAPSHOT.jar!/" />
+      <root url="jar://$PROJECT_DIR$/build/apache-cassandra-3.7-SNAPSHOT-DELAY.jar!/" />
+      <root url="jar://$PROJECT_DIR$/build/maven-ant-tasks-2.1.3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/build/apache-cassandra-thrift-3.7-SNAPSHOT-DELAY.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

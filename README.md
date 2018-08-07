@@ -1,7 +1,14 @@
 # Consistency-Latency-Tradeoff
-Experiment of the Consistency-Latency Tradeoff Algorithm.
+本实验在本地沙盒和阿里云两套集群环境中分别进行。
 
-实验进度：
+实验主要包括以下内容：
+
+1. Cassandra配置
+2. YCSB配置
+3. k-atomicity验证
+4.  一致性-延迟权衡
+
+目前实验进度：
 
 | 阶段                         | 目前进展                              |
 | ---------------------------- | ------------------------------------- |
@@ -14,14 +21,49 @@ Experiment of the Consistency-Latency Tradeoff Algorithm.
 
 ## Cassandra 配置
 
+###  本地沙盒
+
+见single-host-cassandra目录，主要包括：
+
+* *install-cassandra.sh*: 生成指定用户的资源。
+
+  `./install-cassandra.sh {cname} {uname} {num} [networktopology] `
+
+  其中 多数据中心默认3中心。
+
+* *cassandra-env.sh*: 启动cassandra，并设置相关环境变量。
+
+  `./cassandra-env.sh {uname} [random params]`
+
+* *stop.sh* & *stop-and-delete.sh*: 停止Cassandra进程（并删除所有内容）
+
+  `./stop-delete.sh {uname} `
+
+* cassandra: 包含Cassandra源码和相关启动脚本，本实验中对*read repair*相关功能做了修改（禁止在Consistency level = Quorum的一致性条件发现DigestMismatch时启动修复功能）修改源码后，使用ant对cassandra进行编译，结果主要体现在*build/apache-cassandra-3.x-[xxx].jar, build/apache-cassandra-thrift-3.x-[xxx].jar*中。
+
+
+
+### 阿里云
+
+
 
 ## YCSB 配置
 
+见ycsb-0.12.0目录。主要包括运行ycsb测试框架的脚本文件，DB层和负载层配置等。
+
+* *bin/BatchExec.py*: 启动YCSB，配置相关负载参数。
+* *lib*: 类文件。主要改写的代码包括workload层和DB层。
+* *workload*: 基本负载参数可在此目录下文件中设定，在脚本文件中调用。
+
 ### Workload层
 
-新建一个CLTradeoffWorkload继承CoreWorkload,改写其中的doInsert, doRead, doWrite方法。
+Workload层实现定制化的负载生成服务。负载参数如读写比例，频率等都在本层进行设定。
+
+新建一个CLTradeoffWorkload继承CoreWorkload, 改写其中的doInsert, doRead, doWrite方法。
 
 ### DB层
+
+DB层负责调用数据库的客户端借口进行实际数据库操作。本实验中多轮通信的子过程都在DB层实现。
 
 为了简化，在实验中将表格中的数据结构按照以下方式设置：
 
@@ -68,7 +110,34 @@ Experiment of the Consistency-Latency Tradeoff Algorithm.
 5. 存在问题：
 
    * 未实现一轮写算法中在ack中携带版本号；
-   * 采用NetworkTopology拓扑策略，即Cassandra内部识别不同数据中心的节点。这种策略下的实现改动较少，只需要将读写一致性设置为Quorum，即可以通过Cassandra内部的转发机制实现算法。存在风险：每个数据中心内有一个协调者负责向副本节点转发用户请求并收集结果返回给用户。与算法中所要求的“副本节点之间不通信”条件有些出入。（不过，如果可以保证协调者非副本节点即可？）
+   * 采用NetworkTopology拓扑策略，即Cassandra内部识别不同数据中心的节点。这种策略下的实现改动较少，只需要将读写一致性设置为Quorum，即可以通过Cassandra内部的转发机制实现算法。存在风险：每个数据中心内有一个协调者负责向副本节点转发用户请求并收集结果返回给用户。与算法中所要求的“副本节点之间不通信”条件有些出入。（不过，如果保证协调者只负责数据的转发和收集，对算法影响较小。）
+
+## 实验参数
+
+### Cassandra 影响参数
+
+* 网络拓扑(replication strategy) & 副本数量(replica factor)：设定为3_3_3, 3_1_1, 1_1_1 三组。
+
+* 跨数据中心服务器的网络延迟：
+
+* 读修复：禁止，即设置：
+
+  `dclocal_read_repair_chance=0 `
+
+  `  read_repair_chance=0`
+
+* caching: 禁止，即在创建keyspace时设置：
+
+  `... WITH caching = { 'keys' : 'NONE', 'rows_per_partition' : 'NONE' };`
+
+  
+
+### YCSB影响参数
+
+* 读写用户数：
+* 读写吞吐率：
+* 客户端和服务器的网络延迟：
+* 通信轮数：read round/ write round = 1 or 2
 
 
 
@@ -86,12 +155,34 @@ Experiment of the Consistency-Latency Tradeoff Algorithm.
 1. 存在两个forward zone 相交
 2. 存在一个forward zone 包含某个backward zone.
 
+目前得到的验证结果：
+
+| W2     | W1         |
+| ------ | ---------- |
+| atomic | Non-atomic |
+
+存在问题：
+
+W2R1目前仍未出现过non-atomic结果。
+
+考虑以下原因：
+
+* Cassandra内部优化措施如读修复未完全关闭（参考[set read repair chance to 0 but find read repair process in trace](https://issues.apache.org/jira/browse/CASSANDRA-11409)）。简单而言，当Cassandra的读请求过程中返回多个副本数据时，若出现 digest mismatch的情况，会自动引发读修复，即使设置了`dclocal_read_repair_chance=0 `
+
+  `  read_repair_chance=0`。
+
+  潜在解决方案：
+
+  * 修改源码。需要将所有触发读修复的机制全取消。
+
+  * 放弃Cassandra自带的QUORUM读写机制，重写客户端，Consistency Level设置为ONE（此时只返回一个副本节点，不会触发读修复）。自定义实现QUORUM通信和副本比较机制。
+
+    
+
 ##k-atomicity验证算法
 
 1. 处理chunk, 采用FZF(Forward Zone First)算法[2][2]。高效实现需要用到interval tree结构（正在实现这步）
 2. 对每个chunk使用GPO算法[3][3]。
-
-
 
 
 

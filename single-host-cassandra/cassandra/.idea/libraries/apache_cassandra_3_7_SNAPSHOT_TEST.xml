@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="apache-cassandra-3.7-SNAPSHOT-TEST">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/bin/apache-cassandra-3.7-SNAPSHOT-TEST.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
