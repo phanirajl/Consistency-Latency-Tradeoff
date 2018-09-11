@@ -17,6 +17,11 @@
 | k-atomicity 验证             | 已实现验证atomicity算法，待实现：k-av |
 | Consistency-Latency Tradeoff | 待测                                  |
 
+当前计划：
+
+* 参考黄茂森论文的实验结果数据：服务器之间延迟越大，不一致性出现的情况越多。计划增加Cassandra中服务器之间的延迟进行试验；
+* 主要针对W2R1下总是得出atomic的情况查找原因。目前猜测原因如下：读QUORUM的情况下会自动触发读修复功能，需要修改源码禁用该修复（难点）。
+
 
 
 ## Cassandra 配置
@@ -116,9 +121,13 @@ DB层负责调用数据库的客户端借口进行实际数据库操作。本实
 
 ### Cassandra 影响参数
 
+* 服务器之间的延迟：
+
 * 网络拓扑(replication strategy) & 副本数量(replica factor)：设定为3_3_3, 3_1_1, 1_1_1 三组。
 
 * 跨数据中心服务器的网络延迟：
+
+* 读写一致性程度：QUORUM
 
 * 读修复：禁止，即设置：
 
@@ -130,7 +139,6 @@ DB层负责调用数据库的客户端借口进行实际数据库操作。本实
 
   `... WITH caching = { 'keys' : 'NONE', 'rows_per_partition' : 'NONE' };`
 
-  
 
 ### YCSB影响参数
 
@@ -167,17 +175,28 @@ W2R1目前仍未出现过non-atomic结果。
 
 考虑以下原因：
 
-* Cassandra内部优化措施如读修复未完全关闭（参考[set read repair chance to 0 but find read repair process in trace](https://issues.apache.org/jira/browse/CASSANDRA-11409)）。简单而言，当Cassandra的读请求过程中返回多个副本数据时，若出现 digest mismatch的情况，会自动引发读修复，即使设置了`dclocal_read_repair_chance=0 `
+* 参考黄茂森论文的实验结果数据：服务器之间延迟越大，不一致性出现的情况越多。计划增加Cassandra中服务器之间的延迟进行试验；
 
-  `  read_repair_chance=0`。
+* Cassandra内部优化措施如读修复未完全关闭（当一致性级别CL=QUORUM时，系统的读修复是在读请求的过程中自动触发的。参考[set read repair chance to 0 but find read repair process in trace](https://issues.apache.org/jira/browse/CASSANDRA-11409)）。简单而言，Cassandra的读修复是读操作发生时的副本同步技术，分为**前台读修复**和**后台读修复**。
+
+  > **前台读修复**：
+  >
+  > 当一致性级别CL>ONE时， Cassandra的读请求过程中会访问多个副本数据，若出现数据不一致（ digest mismatch）的情况，会自动引发前台读修复，此时*所有*（存疑）具有该数据的副本节点都会被访问到并且进行数据修复，待修复完成后才会返回数据给客户端。
+  >
+  > **后台读修复**：
+  >
+  > 当一致性级别CL=ONE时，先返回数据给客户端，再进行读修复。整个修复流程发生在后台，不会阻塞响应返回。后台读修复会修复所有副本。
+  >
+  > **注**：
+  >
+  > *dclocal_read_repair_chance*和*read_repair_chance*是设置**后台读修复**的机率参数，即使设置`dclocal_read_repair_chance=0 `和`  read_repair_chance=0`，前台读修复也会在一致性级别CL>ONE时且出现数据不一致（ digest mismatch）的情况下引发，要禁用此功能需要修改源码。
 
   潜在解决方案：
 
-  * 修改源码。需要将所有触发读修复的机制全取消。
-
   * 放弃Cassandra自带的QUORUM读写机制，重写客户端，Consistency Level设置为ONE（此时只返回一个副本节点，不会触发读修复）。自定义实现QUORUM通信和副本比较机制。
+  * （推荐）修改源码。需要将所有触发读修复的机制全取消。需要注意以下事项：
+    * 由于Cassandra在CL=QUORUM的读过程中只读取个别副本的完整数据（speculative_retry = NONE时），剩下副本读取digest进行比较是否一致（发生不一致时再进行一次对所有副本的完整数据读取兼修复，即前台读修复原理），因此，实验中需要将读过程变成不进行读修复的一轮通信过程，即向所有的副本发送完整读请求（DataResponse）而非摘要请求（DigestResponse）,通过比较版本号直接返回最新版本的数据而不触发读修复。
 
-    
 
 ##k-atomicity验证算法
 
