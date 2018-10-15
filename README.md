@@ -195,7 +195,7 @@ W2R1目前仍未出现过non-atomic结果。
 
   * 放弃Cassandra自带的QUORUM读写机制，重写客户端，Consistency Level设置为ONE（此时只返回一个副本节点，不会触发读修复）。自定义实现QUORUM通信和副本比较机制。
   * （推荐）修改源码。需要将所有触发读修复的机制全取消。需要注意以下事项：
-    * 由于Cassandra在CL=QUORUM的读过程中只读取个别副本的完整数据（speculative_retry = NONE时），剩下副本读取digest进行比较是否一致（发生不一致时再进行一次对所有副本的完整数据读取兼修复，即前台读修复原理），因此，实验中需要将读过程变成不进行读修复的一轮通信过程，即向所有的副本发送完整读请求（DataResponse）而非摘要请求（DigestResponse）,通过比较版本号直接返回最新版本的数据而不触发读修复。
+    * 由于Cassandra在CL=QUORUM的读过程中只读取个别副本的完整数据（speculative_retry = NONE时），剩下副本读取digest进行比较是否一致（发生不一致时再进行一次对所有副本的完整数据读取兼修复，即前台读修复原理），因此，实验中需要将读过程变成不进行读修复的一轮通信过程，即向所有的副本发送完整读请求（makeDataRequests）而非摘要请求（makeDigestRequests）,通过比较版本号直接返回最新版本的数据而不触发读修复。
 
 
 ##k-atomicity验证算法
