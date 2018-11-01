@@ -211,7 +211,7 @@ DB层负责调用数据库的客户端借口进行实际数据库操作。本实
 | ----------------------------------- | ---------- |
 | Replication Strategy                | 1_1_1      |
 | Delay between servers & clients/ms  | 0          |
-| Delay between servers across DCs/ms | 30         |
+| Delay between servers across DCs/ms | 50         |
 | Read repair chance(local/DC)        | 0          |
 | Load Balance Strategy               | RoundRobin |
 
@@ -260,6 +260,7 @@ DB层负责调用数据库的客户端借口进行实际数据库操作。本实
 
 1. 一致性违反概率暂时采用出现一致性违反的读写对数量占总的读数量而定，而不是*k*-ato规则（算法暂时未实现）。
 2. W1R2算法虽然出现读到陈旧值的概率不高，但是会出现大部分写操作无法成功写入值的情况，因此实用性不高（需要另外选取衡量写入成功概率的指标）。
+3. 主要延迟体现在通信延迟上（人为添加跨数据中心延迟不低于50ms，即一轮完整通信延迟不低于100ms）
 
 ### 实验二  Cassandra真实性能验证
 
