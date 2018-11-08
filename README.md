@@ -203,7 +203,7 @@ DB层负责调用数据库的客户端借口进行实际数据库操作。本实
 |                                  | Write  | Read   |
 | -------------------------------- | ------ | ------ |
 | Consistency level                | QUORUM | QUORUM |
-| Quorum-based communication round | 1/2    | 1/2    |
+| Quorum-based communication round | 1 or 2 | 1 or 2 |
 | qps                              | 50     | 1000   |
 | Client num                       | 10     | 10     |
 
@@ -212,7 +212,7 @@ DB层负责调用数据库的客户端借口进行实际数据库操作。本实
 | Replication Strategy                | 1_1_1      |
 | Delay between servers & clients/ms  | 0          |
 | Delay between servers across DCs/ms | 50         |
-| Read repair chance(local/DC)        | 0          |
+| Read repair chance(local/DC)        | 0, 0       |
 | Load Balance Strategy               | RoundRobin |
 
 
@@ -248,17 +248,18 @@ DB层负责调用数据库的客户端借口进行实际数据库操作。本实
 
 ### 实验一  理论模型验证
 
-采用参数默认值配置，得到的实验结果如下（2018.10.31）：
+采用参数默认值配置，重复实验30次，得到的实验结果如下（2018.11.8）：
 
-| Algorithm | Write Latency/ms | Read Latency/ms | Atomicity violation Probability |
-| --------- | ---------------- | --------------- | ------------------------------- |
-| W2R2      | 215              | 211             | 0/265554=0                      |
-| W2R1      | 218              | 104             | 6/2174423≈0.0000028=2.8e-6      |
-| W1R2      | 112              | 211             | 13850/265506≈0.052              |
+| Alg. | Write Latency/ms | Read Latency/ms | Violation Num | Violation Probability | *k*_max | P(*k*>1) | E(*k*) | Most_freq(*k*) |
+| ---- | ---------------- | --------------- | ------------- | --------------------- | ------- | -------- | ------ | -------------- |
+| W2R2 | 214              | 213             | 0             | 0.0                   | 1       | 0        | 1      | 1              |
+| W2R1 | 218              | 104             | 137           | 0.000006263           |         |          |        |                |
+| W1R2 | 112              | 211             | 1712          | 0.000078              |         |          |        |                |
+| W1R1 |                  |                 |               |                       |         |          |        |                |
 
 注：
 
-1. 一致性违反概率暂时采用出现一致性违反的读写对数量占总的读数量而定，而不是*k*-ato规则（算法暂时未实现）。
+1. 一致性违反概率暂时采用:出现一致性违反的cluster读写对（forward zone or backward zone pair）数量占总的cluster读写对数量而定，而不是*k*-ato规则（算法暂时未实现）。
 2. W1R2算法虽然出现读到陈旧值的概率不高，但是会出现大部分写操作无法成功写入值的情况，因此实用性不高（需要另外选取衡量写入成功概率的指标）。
 3. 主要延迟体现在通信延迟上（人为添加跨数据中心延迟不低于50ms，即一轮完整通信延迟不低于100ms）
 
