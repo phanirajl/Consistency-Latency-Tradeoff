@@ -1,0 +1,377 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="8b7c97c8-2c4a-4284-8f1a-9d9ecd34eef9" name="Default Changelist" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="bin" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/auto_exec.sh">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="399">
+              <caret line="21" selection-start-line="21" selection-end-line="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/conf.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="951">
+              <caret line="72" column="2" selection-start-line="72" selection-start-column="2" selection-end-line="72" selection-end-column="2" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/get_ycsb_traces.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2129">
+              <caret line="186" column="45" selection-start-line="186" selection-start-column="45" selection-end-line="186" selection-end-column="45" />
+              <folding>
+                <element signature="e#43#80#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ycsb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="247">
+              <caret line="13" column="52" selection-start-line="13" selection-start-column="52" selection-end-line="13" selection-end-column="52" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/result_display.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="418">
+              <caret line="27" column="8" selection-start-line="27" selection-start-column="8" selection-end-line="27" selection-end-column="8" />
+              <folding>
+                <element signature="e#43#52#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/atomicity_latency_calculation.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="3667">
+              <caret line="200" column="20" selection-start-line="200" selection-start-column="12" selection-end-line="200" selection-end-column="20" />
+              <folding>
+                <element signature="e#43#74#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>replicaId</find>
+      <find>param_values</find>
+      <find>idxx</find>
+      <find>dir_name</find>
+      <find>name_map</find>
+      <find>property_result_list</find>
+      <find>parameter_name_map</find>
+      <find>&quot; +</find>
+      <find>paramValue</find>
+      <find>#</find>
+      <find />
+      <find>client_count_in_total</find>
+      <find>replicaP</find>
+      <find>replica_str</find>
+      <find>x</find>
+      <find>param_name</find>
+      <find>vals</find>
+      <find>filelist</find>
+      <find>title</find>
+      <find>ax1</find>
+      <find>_list[0]</find>
+      <find>db</find>
+      <find>default_setting</find>
+      <find>session</find>
+      <find>directory_name</find>
+      <find>current_path</find>
+      <find>os.getcwd()</find>
+      <find>k_atomicity_result_name</find>
+      <find>deepcopy</find>
+      <find>Interval</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>ops</replace>
+      <replace>read_round</replace>
+      <replace>client_count_in_total</replace>
+      <replace>clientID</replace>
+      <replace />
+      <replace>replica_factor</replace>
+      <replace>other_read_index</replace>
+      <replace>duration</replace>
+      <replace>trace_zone_violation_num</replace>
+      <replace>param_values</replace>
+      <replace>' '</replace>
+      <replace>', '</replace>
+      <replace>client_id</replace>
+      <replace>property_result_list</replace>
+      <replace>param_name</replace>
+      <replace>param_map</replace>
+      <replace>',</replace>
+      <replace>make-plot</replace>
+      <replace>param_value</replace>
+      <replace />
+      <replace>#</replace>
+      <replace>client_count</replace>
+      <replace>name</replace>
+      <replace>v</replace>
+      <replace>ax1</replace>
+      <replace>file_list</replace>
+      <replace>set_xticks</replace>
+      <replace>ax3</replace>
+      <replace>= default_</replace>
+      <replace>default_setting_done</replace>
+    </replaceStrings>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/BatchExec3.py" />
+        <option value="$PROJECT_DIR$/W2R1worstcase.py" />
+        <option value="$PROJECT_DIR$/WR_mixed.py" />
+        <option value="$PROJECT_DIR$/WR_mixed_v0.py" />
+        <option value="$PROJECT_DIR$/WR_mixed _v1.py" />
+        <option value="$PROJECT_DIR$/k_av.py" />
+        <option value="$PROJECT_DIR$/k_av1.py" />
+        <option value="$PROJECT_DIR$/WR_mixed_v1.py" />
+        <option value="$PROJECT_DIR$/tunable-parameters.py" />
+        <option value="$PROJECT_DIR$/tunable_parameters.py" />
+        <option value="$PROJECT_DIR$/make-graph.py" />
+        <option value="$PROJECT_DIR$/util/WriteReadCluster.py" />
+        <option value="$PROJECT_DIR$/util/RawResult.py" />
+        <option value="$PROJECT_DIR$/WR_mixed_v2.py" />
+        <option value="$PROJECT_DIR$/get-atomicity-latency.py" />
+        <option value="$PROJECT_DIR$/util/make-plot.py" />
+        <option value="$PROJECT_DIR$/util/k_calculation.py" />
+        <option value="$PROJECT_DIR$/plot.py" />
+        <option value="$PROJECT_DIR$/util/Op.py" />
+        <option value="$PROJECT_DIR$/util/one_kv.py" />
+        <option value="$PROJECT_DIR$/atomicity_latency_calculation.py" />
+        <option value="$PROJECT_DIR$/result_display.py" />
+        <option value="$PROJECT_DIR$/auto_exec.sh" />
+        <option value="$PROJECT_DIR$/get_ycsb_traces.py" />
+        <option value="$PROJECT_DIR$/conf.py" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="525" />
+    <option name="y" value="142" />
+    <option name="width" value="1390" />
+    <option name="height" value="1000" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="bin" type="b2602c69:ProjectViewProjectNode" />
+              <item name="bin" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="WR_mixed_v1" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="bin" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/get_ycsb_traces.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.WR_mixed_v1" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="8b7c97c8-2c4a-4284-8f1a-9d9ecd34eef9" name="Default Changelist" comment="" />
+      <created>1543890170858</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1543890170858</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="67" y="25" width="2493" height="1415" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4992236" visible="true" weight="0.13927126" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" sideWeight="0.5007764" side_tool="true" weight="0.13927126" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32919255" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32996893" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="Terminal" order="8" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" weight="0.32996893" />
+      <window_info anchor="bottom" id="Python Console" order="10" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/BatchExec2.py" />
+    <entry file="file://$PROJECT_DIR$/W1R2worstcase.py" />
+    <entry file="file://$PROJECT_DIR$/intervaltree/intervaltree.py" />
+    <entry file="file://$PROJECT_DIR$/WR_mixed.py" />
+    <entry file="file://$PROJECT_DIR$/WR_mixed _v1.py" />
+    <entry file="file://$PROJECT_DIR$/k_av.py" />
+    <entry file="file://$PROJECT_DIR$/WR_mixed_v1.py" />
+    <entry file="file://$PROJECT_DIR$/tunable_parameters.py" />
+    <entry file="file://$PROJECT_DIR$/BatchExec0.py" />
+    <entry file="file://$PROJECT_DIR$/WR_mixed_v0.py" />
+    <entry file="file:///usr/lib/python2.7/os.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="135" column="4" selection-start-line="135" selection-start-column="4" selection-end-line="135" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/util/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/util/make_plot.py" />
+    <entry file="file://$PROJECT_DIR$/util/k_calculation.py" />
+    <entry file="file://$PROJECT_DIR$/util/Op.py" />
+    <entry file="file://$PROJECT_DIR$/util/WriteReadCluster.py" />
+    <entry file="file://$PROJECT_DIR$/util/one_kv.py" />
+    <entry file="file://$PROJECT_DIR$/util/one_kv_rules.py" />
+    <entry file="file://$PROJECT_DIR$/auto_exec.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ycsb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="13" column="52" selection-start-line="13" selection-start-column="52" selection-end-line="13" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/result_display.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="27" column="8" selection-start-line="27" selection-start-column="8" selection-end-line="27" selection-end-column="8" />
+          <folding>
+            <element signature="e#43#52#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/atomicity_latency_calculation.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3667">
+          <caret line="200" column="20" selection-start-line="200" selection-start-column="12" selection-end-line="200" selection-end-column="20" />
+          <folding>
+            <element signature="e#43#74#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/get_ycsb_traces.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2129">
+          <caret line="186" column="45" selection-start-line="186" selection-start-column="45" selection-end-line="186" selection-end-column="45" />
+          <folding>
+            <element signature="e#43#80#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/conf.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="951">
+          <caret line="72" column="2" selection-start-line="72" selection-start-column="2" selection-end-line="72" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ScopeChooserConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

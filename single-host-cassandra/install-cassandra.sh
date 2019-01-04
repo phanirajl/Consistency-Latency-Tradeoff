@@ -1,86 +1,128 @@
 #!/bin/bash
 
-# $1 indicates cluster name, $2 is username, $3 stores node number (optional, default is 3)
+# $1 : user name
+# $2 : topology
+# $3 : start_ip (optional, default : 127.0.0.1)
 
+CLUSTER_NAME=$1"_cluster"
+DC_MACHINE_NUM=(${2//_/ })
+DC_NUM=${#DC_MACHINE_NUM[@]}
 
-CLUSTER_NAME=$1
-MAXCAP=10
-# even only there is one datacenter this can be also 3 or 5 to set more seeds
-datacenter=3
+if [[ $# -lt 3 ]]; then
+    start_seq=71
+else
+    start_seq=$3
+fi
 
-if [[ $# -ge 3 && $3 -gt $MAXCAP ]]; then
-    echo "total number of node ecceeds $MAXCAP, abort."
-    exit 2
+# seeds
+seeds="127.0.0.$start_seq"
+seedno=${start_seq}
+NODE_IN_DC=()
+for ((i=0;i<$DC_NUM;i++)); do
+    for id in `seq $((seedno-$start_seq)) $((seedno+${DC_MACHINE_NUM[i]}-1-$start_seq))` ; do
+        NODE_IN_DC[$id]=$(($i+1))
+#        echo ${NODE_IN_DC[$id]}
+    done
+    if [[ $i -lt ${DC_NUM}-1  ]]; then
+        seedno=$((seedno+${DC_MACHINE_NUM[i]}))
+        seeds=$seeds",127.0.0.$seedno"
+    fi
+done
+echo "seeds:"$seeds
+end_seq=$((seedno+${DC_MACHINE_NUM[$DC_NUM-1]}-1))
+#echo $end_seq
+
+# topology
+if [[ ${DC_NUM} -gt 1 ]]; then
+    TOPOLOGY="networktopology"
+else
+    TOPOLOGY="simpletopology"
 fi
 
 
-# $2 passes in username like 'whf', $1 indicates the start number of the username
+# $1 : node id
+setup_node()
+{
+    printf " \n+ Setting up node%d...\n" $1
+    create_dirs $1
+    setup_resources $1
+    tweak_cassandra_config $1
+}
+
+
 create_dirs()
 {
 	node=$1
-	mkdir -p $2/node$node/data/{data,commitlog,saved_caches}
-        mkdir -p $2/node$node/hints
-	mkdir -p $2/node$node/logs
+	mkdir -p $CLUSTER_NAME/node$node/data/{data,commitlog,saved_caches}
+    mkdir -p $CLUSTER_NAME/node$node/hints
+	mkdir -p $CLUSTER_NAME/node$node/logs
 }
+
 
 copy_config()
 {
 	node=$1
-	src="/etc/cassandra"
-	dst="$2/node$node/conf"
+	src="cassandra/conf"
+	dst="$CLUSTER_NAME/node$node/conf"
 	mkdir -p $dst
 	cp -r "$src"/* $dst
 }
 
+
 setup_resources()
 {
-    printf "    - Copying configs\n"
-    copy_config $1 $2
+    echo "  -Copying configurations"
+    copy_config $1
 }
 
-setup_node()
-{
-    printf "    + setting up node %d...\n" $1
-    create_dirs $1 $2
-    setup_resources $1 $2
-    tweak_cassandra_config $*
-}
+
 
 tweak_cassandra_config()
 {
-    env="$2/node$1/conf/cassandra-env.sh"
-    conf="$2/node$1/conf/cassandra.yaml"
-    logs="$2/node$1/conf/logback.xml"
-    jvm="$2/node$1/conf/jvm.options"
-    rackdc="$2/node$1/conf/cassandra-rackdc.properties"
+    env="$CLUSTER_NAME/node$1/conf/cassandra-env.sh"
+    conf="$CLUSTER_NAME/node$1/conf/cassandra.yaml"
+    logs="$CLUSTER_NAME/node$1/conf/logback.xml"
+    jvm="$CLUSTER_NAME/node$1/conf/jvm.options"
+    rackdc="$CLUSTER_NAME/node$1/conf/cassandra-rackdc.properties"
 
-    base_data_dir="$2/node$1/data"
+    base_data_dir="$CLUSTER_NAME/node$1/data"
+
+    # Set the JMX port
+    let port=7200+$1
+	echo "  -Setting up JMX port :$port"
+    regexp="s/JMX_PORT=\"7199\"/JMX_PORT=\"$port\"/g"
+    sed -i -- $regexp $env
 
     # set Xms and Xmx
-    printf "    -Setting heap properties\n"
     regexp="s/#\-Xms4G/-Xms2G/g"
     sed -i -- "$regexp" $jvm
     regexp="s/#-Xmx4G/-Xmx2G/g"
     sed -i -- "$regexp" $jvm
     echo -e "\n-XX:MaxDirectMemorySize=1024M\n-XX:NativeMemoryTracking=summary" >> $jvm
-	#echo -e "\ncassandra.logdir: ""/$2/node$1/logs" >> $conf
-	#echo -e "\ncassandra.staragedir: ""/$2/node$1/data" >> $conf
+    echo "  -Setting heap properties:-Xms2G -Xmx2G -XX:NativeMemoryTracking=summary"
+	#echo -e "\ncassandra.logdir: ""/$CLUSTER_NAME/node$1/logs" >> $conf
+	#echo -e "\ncassandra.staragedir: ""/$CLUSTER_NAME/node$1/data" >> $conf
 	#echo -e "\ncassandra.configurationFile: ""2/node$1/conf/logback.xml" >> $conf
-	
+
+    # Set the gc log location
+    regexp="s|#-Xloggc:/var/log/cassandra/gc.log|-Xloggc:$CLUSTER_NAME/node$1/logs/gc.log|g"
+    sed -i -- "$regexp" $jvm
+    if [[ ! -e $CLUSTER_NAME/node$1/logs/gc.log ]]; then
+        touch "$CLUSTER_NAME/node$1/logs/gc.log"
+    fi
+    echo "  -Setting up the GC log location:$CLUSTER_NAME/node$1/logs/gc.log"
+
+    # C* logs
+    regexp="s|<jmxConfigurator />|<jmxConfigurator /> <property name=\"cassandra.logdir\" value=\"$CLUSTER_NAME/node$1/logs/\" />|g"
+    sed -i -- "$regexp" $logs
+
     # Set the cluster name
-    printf "    - Setting up the cluster name\n"
     regexp="s/Test Cluster/$CLUSTER_NAME/g"
     sed -i -- "$regexp" $conf
-
-    # Set the JMX port
-    printf "	-Setting up JMX port\n"
-    let port=7199+$1
-	echo "port $port"
-    regexp="s/JMX_PORT=\"7199\"/JMX_PORT=\"$port\"/g"
-    sed -i -- $regexp $env
+    echo "  -Setting up the cluster name:"$CLUSTER_NAME
 
     # Set the commitlog directory, and various other directories
-    printf "	- Setting up directories\n"
+    echo "  -Setting up directories"
     regexp="s|/var/lib/cassandra/commitlog|$base_data_dir/commitlog|g"
     sed -i -- "$regexp" $conf
 
@@ -92,48 +134,39 @@ tweak_cassandra_config()
     regexp="s|/var/lib/cassandra/saved_caches|$base_data_dir/saved_caches|g"
     sed -i -- "$regexp" $conf
 
-    # C* logs
-    regexp="s|<jmxConfigurator />|<jmxConfigurator /> <property name=\"cassandra.logdir\" value=\"$2/node$1/logs/\" />|g"
-    sed -i -- "$regexp" $logs
-
-    # Set the gc log location
-    printf "    - Setting up the GC log location\n"
-    regexp="s|#-Xloggc:/var/log/cassandra/gc.log|-Xloggc:$2/node$1/logs/gc.log|g"
-    sed -i -- "$regexp" $jvm
-    if [[ ! -e $2/node$1/logs/gc.log ]]; then
-        touch "$2/node$1/logs/gc.log"
-    fi
-
     # Disable hinted handoff
-    #printf "    - Disable hinted handoff\n"
-    #regexp="s|^hinted_handoff_enabled:.*|hinted_handoff_enabled: false|g"
-    #sed -i -- "$regexp" $conf
-
-    # Set the hints location
-    printf "    - Setting up the hints location\n"
-    regexp="s|^# hints_directory.*|hints_directory: $2/node$1/hints|g"
+    echo "  -Disable hinted handoff"
+    regexp="s|^hinted_handoff_enabled:.*|hinted_handoff_enabled: false|g"
     sed -i -- "$regexp" $conf
 
-    if [[ $4 == "networktopology" ]]; then
+    # Set the hints location
+    echo "  -Setting up the hints location"
+    regexp="s|^# hints_directory.*|hints_directory: $CLUSTER_NAME/node$1/hints|g"
+    sed -i -- "$regexp" $conf
+
+    if [[ $TOPOLOGY == "networktopology" ]]; then
         # Override datacenter information
-        printf "    - Override datacenter information\n"
-        let dc=($1-$start_seq)/$dcmachine+1
+
+        id=$(($1-$start_seq))
+        let dc=${NODE_IN_DC[$id]}
         regexp="s|^dc=dc1|dc=dc$dc|g"
         sed -i -- "$regexp" $rackdc
+        echo "  -Override DC information:dc=dc"$dc
 
         # Set snitch
-        printf "    Set snitch property\n"
+        echo "  -Set snitch property"
         regexp="s|^endpoint_snitch.*|endpoint_snitch: GossipingPropertyFileSnitch|g"
+	    #regexp="s|^endpoint_snitch.*|endpoint_snitch: DynamicEndpointSnitch|g"
         sed -i -- "$regexp" $conf
     fi
 
     # Set up the network interface
-    printf "    - Setting up network interface\n"
+    echo "  -Setting up network interface"
     sudo ifconfig "lo:$1" "127.0.0.$1"
 
     # Bind the various services to their local IP address
     # listen_address
-    printf "      - Binding services\n"
+    echo "  -Binding services:listen_address: 127.0.0.$1 rpc_address: 127.0.0.$1"
     regexp="s/listen_address: localhost/listen_address: 127.0.0.$1/g"
     sed -i -- "$regexp" $conf
 
@@ -141,56 +174,72 @@ tweak_cassandra_config()
     regexp="s/rpc_address: localhost/rpc_address: 127.0.0.$1/g"
     sed -i -- "$regexp" $conf
 
-    
+
     # seeds="127.0.0.$3"
 
     # seeds=`echo $raw_seeds | sed -e s/,$//`
     regexp="s/seeds: \"127.0.0.1\"/seeds: \"$seeds\"/g"
     sed -i -- "$regexp" $conf
-} 
+}
 
 
-start_seq=`bash userno.sh $2 $MAXCAP`
-
-[ $start_seq = "illegal" ] && exit 1
-
-
-if [[ $# -lt 3 ]]; then
-    C_NODES=3
-else
-    C_NODES=$3
-fi
-printf "~= cluster: %s, %d nodes =~\n" "$CLUSTER_NAME" "$C_NODES"
-
-let dcmachine=$C_NODES/$datacenter
-
-let end_seq=$start_seq+$C_NODES-1
-echo "end_seq $end_seq" 
-
-# seeds
-seeds=''
-for ((idc=1;idc<=$datacenter;idc++)); do 
-	let seedno=$start_seq+$idc*$dcmachine-$dcmachine; echo $seedno;
-	if [[ $seedno > $end_seq ]]; then
-		break
-	fi
-	if [[ -z $seeds ]]; then
-		seeds="127.0.0.$seedno"
-	else
-		seeds=$seeds",127.0.0.$seedno"
-	fi
-	
-done
-echo $seeds
-	
-
-topo="simpletopology"
-if [[ $# -gt 3 && $4 == "networktopology" ]]; then
-    topo="networktopology"
-fi
-
+# nodes setup
 for i in $(seq $start_seq $end_seq); do
-    setup_node $i $2 $start_seq $topo
+    setup_node $i
+    if test -z $iplist; then
+        iplist="127.0.0.$i"
+    else
+        iplist=$iplist",127.0.0.$i"
+    fi
 done
+#echo $iplist
 
-printf "Done.\n"
+# record ip list
+file="../ycsb/workloads/cassProperties"
+sed -i -e "s|^hosts=.*|hosts=$iplist|g" -e "s/[,]*$//g" $file
+
+echo "Done."
+
+
+
+
+
+
+
+#[ $start_seq = "illegal" ] && exit 1
+
+
+#if [[ $# -lt 3 ]]; then
+#    C_NODES=3
+#else
+#    C_NODES=$3
+#fi
+#echo "~= cluster: %s, %d nodes =~\n" "$CLUSTER_NAME" "$C_NODES"
+
+#let dcmachine=$C_NODES/$DC_NUM
+#
+#let end_seq=$start_seq+$C_NODES-1
+#echo "end_seq $end_seq"
+
+
+
+
+#
+#for ((idc=1;idc<=$DC_NUM;idc++)); do
+#	let seedno=$start_seq+$idc*$dcmachine-$dcmachine; echo $seedno;
+#	if [[ $seedno > $end_seq ]]; then
+#		break
+#	fi
+#	if [[ -z $seeds ]]; then
+#		seeds="127.0.0.$seedno"
+#	else
+#		seeds=$seeds",127.0.0.$seedno"
+#	fi
+#
+#done
+#echo $seeds
+#
+#
+
+
+

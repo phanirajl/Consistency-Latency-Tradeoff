@@ -31,7 +31,10 @@ echo "$CASSANDRA_CONF"
 # it's just used here in constructing the classpath.
 #cassandra_bin="$CASSANDRA_HOME/build/classes/main"
 #cassandra_bin="$cassandra_bin:$CASSANDRA_HOME/build/classes/thrift"
-cassandra_bin="$CASSANDRA_HOME/build/apache-cassandra-3.7-SNAPSHOT.jar"":$CASSANDRA_HOME/build/apache-cassandra-thrift-3.7-SNAPSHOT.jar"
+
+#cassandra_bin="$CASSANDRA_HOME/build/apache-cassandra-3.7-SNAPSHOT.jar"":$CASSANDRA_HOME/build/apache-cassandra-thrift-3.7-SNAPSHOT-DELAY.jar"
+cassandra_bin="$CASSANDRA_HOME/build/apache-cassandra-3.7-SNAPSHOT.jar"
+
 # the default location for commitlogs, sstables, and saved caches
 # if not set in cassandra.yaml
 #cassandra_storagedir="$CASSANDRA_HOME/data"

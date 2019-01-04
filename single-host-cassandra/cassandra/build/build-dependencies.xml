@@ -1,343 +1,343 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project name="maven-dependencies" default="init-dependencies">
 <target name="init-dependencies">
-    <echo level="info" message="Loading dependency paths from file: /Users/ouyanglingzhi/Desktop/cassandra/build/build-dependencies.xml"/>
-    <property name="junit:junit:jar" value="/Users/ouyanglingzhi/.m2/repository/junit/junit/4.6/junit-4.6.jar"/>
-    <fileset id="junit:junit:jar" dir="/Users/ouyanglingzhi/.m2/repository/junit/junit/4.6">
+    <echo level="info" message="Loading dependency paths from file: C:\Users\mio\repo\cassandra\build\build-dependencies.xml"/>
+    <property name="junit:junit:jar" value="C:\Users\mio\.m2\repository\junit\junit\4.6\junit-4.6.jar"/>
+    <fileset id="junit:junit:jar" dir="C:\Users\mio\.m2\repository\junit\junit\4.6">
       <include name="junit-4.6.jar"/>
     </fileset>
-    <property name="org.apache.rat:apache-rat:jar" value="/Users/ouyanglingzhi/.m2/repository/org/apache/rat/apache-rat/0.10/apache-rat-0.10.jar"/>
-    <fileset id="org.apache.rat:apache-rat:jar" dir="/Users/ouyanglingzhi/.m2/repository/org/apache/rat/apache-rat/0.10">
+    <property name="org.apache.rat:apache-rat:jar" value="C:\Users\mio\.m2\repository\org\apache\rat\apache-rat\0.10\apache-rat-0.10.jar"/>
+    <fileset id="org.apache.rat:apache-rat:jar" dir="C:\Users\mio\.m2\repository\org\apache\rat\apache-rat\0.10">
       <include name="apache-rat-0.10.jar"/>
     </fileset>
-    <property name="org.apache.rat:apache-rat-core:jar" value="/Users/ouyanglingzhi/.m2/repository/org/apache/rat/apache-rat-core/0.10/apache-rat-core-0.10.jar"/>
-    <fileset id="org.apache.rat:apache-rat-core:jar" dir="/Users/ouyanglingzhi/.m2/repository/org/apache/rat/apache-rat-core/0.10">
+    <property name="org.apache.rat:apache-rat-core:jar" value="C:\Users\mio\.m2\repository\org\apache\rat\apache-rat-core\0.10\apache-rat-core-0.10.jar"/>
+    <fileset id="org.apache.rat:apache-rat-core:jar" dir="C:\Users\mio\.m2\repository\org\apache\rat\apache-rat-core\0.10">
       <include name="apache-rat-core-0.10.jar"/>
     </fileset>
-    <property name="commons-collections:commons-collections:jar" value="/Users/ouyanglingzhi/.m2/repository/commons-collections/commons-collections/3.2.1/commons-collections-3.2.1.jar"/>
-    <fileset id="commons-collections:commons-collections:jar" dir="/Users/ouyanglingzhi/.m2/repository/commons-collections/commons-collections/3.2.1">
+    <property name="commons-collections:commons-collections:jar" value="C:\Users\mio\.m2\repository\commons-collections\commons-collections\3.2.1\commons-collections-3.2.1.jar"/>
+    <fileset id="commons-collections:commons-collections:jar" dir="C:\Users\mio\.m2\repository\commons-collections\commons-collections\3.2.1">
       <include name="commons-collections-3.2.1.jar"/>
     </fileset>
-    <property name="commons-io:commons-io:jar" value="/Users/ouyanglingzhi/.m2/repository/commons-io/commons-io/2.2/commons-io-2.2.jar"/>
-    <fileset id="commons-io:commons-io:jar" dir="/Users/ouyanglingzhi/.m2/repository/commons-io/commons-io/2.2">
+    <property name="commons-io:commons-io:jar" value="C:\Users\mio\.m2\repository\commons-io\commons-io\2.2\commons-io-2.2.jar"/>
+    <fileset id="commons-io:commons-io:jar" dir="C:\Users\mio\.m2\repository\commons-io\commons-io\2.2">
       <include name="commons-io-2.2.jar"/>
     </fileset>
-    <property name="org.apache.commons:commons-compress:jar" value="/Users/ouyanglingzhi/.m2/repository/org/apache/commons/commons-compress/1.5/commons-compress-1.5.jar"/>
-    <fileset id="org.apache.commons:commons-compress:jar" dir="/Users/ouyanglingzhi/.m2/repository/org/apache/commons/commons-compress/1.5">
+    <property name="org.apache.commons:commons-compress:jar" value="C:\Users\mio\.m2\repository\org\apache\commons\commons-compress\1.5\commons-compress-1.5.jar"/>
+    <fileset id="org.apache.commons:commons-compress:jar" dir="C:\Users\mio\.m2\repository\org\apache\commons\commons-compress\1.5">
       <include name="commons-compress-1.5.jar"/>
     </fileset>
-    <property name="commons-cli:commons-cli:jar" value="/Users/ouyanglingzhi/.m2/repository/commons-cli/commons-cli/1.2/commons-cli-1.2.jar"/>
-    <fileset id="commons-cli:commons-cli:jar" dir="/Users/ouyanglingzhi/.m2/repository/commons-cli/commons-cli/1.2">
+    <property name="commons-cli:commons-cli:jar" value="C:\Users\mio\.m2\repository\commons-cli\commons-cli\1.2\commons-cli-1.2.jar"/>
+    <fileset id="commons-cli:commons-cli:jar" dir="C:\Users\mio\.m2\repository\commons-cli\commons-cli\1.2">
       <include name="commons-cli-1.2.jar"/>
     </fileset>
-    <property name="org.apache.rat:apache-rat-tasks:jar" value="/Users/ouyanglingzhi/.m2/repository/org/apache/rat/apache-rat-tasks/0.10/apache-rat-tasks-0.10.jar"/>
-    <fileset id="org.apache.rat:apache-rat-tasks:jar" dir="/Users/ouyanglingzhi/.m2/repository/org/apache/rat/apache-rat-tasks/0.10">
+    <property name="org.apache.rat:apache-rat-tasks:jar" value="C:\Users\mio\.m2\repository\org\apache\rat\apache-rat-tasks\0.10\apache-rat-tasks-0.10.jar"/>
+    <fileset id="org.apache.rat:apache-rat-tasks:jar" dir="C:\Users\mio\.m2\repository\org\apache\rat\apache-rat-tasks\0.10">
       <include name="apache-rat-tasks-0.10.jar"/>
     </fileset>
-    <property name="org.apache.hadoop:hadoop-core:jar" value="/Users/ouyanglingzhi/.m2/repository/org/apache/hadoop/hadoop-core/1.0.3/hadoop-core-1.0.3.jar"/>
-    <fileset id="org.apache.hadoop:hadoop-core:jar" dir="/Users/ouyanglingzhi/.m2/repository/org/apache/hadoop/hadoop-core/1.0.3">
+    <property name="org.apache.hadoop:hadoop-core:jar" value="C:\Users\mio\.m2\repository\org\apache\hadoop\hadoop-core\1.0.3\hadoop-core-1.0.3.jar"/>
+    <fileset id="org.apache.hadoop:hadoop-core:jar" dir="C:\Users\mio\.m2\repository\org\apache\hadoop\hadoop-core\1.0.3">
       <include name="hadoop-core-1.0.3.jar"/>
     </fileset>
-    <property name="xmlenc:xmlenc:jar" value="/Users/ouyanglingzhi/.m2/repository/xmlenc/xmlenc/0.52/xmlenc-0.52.jar"/>
-    <fileset id="xmlenc:xmlenc:jar" dir="/Users/ouyanglingzhi/.m2/repository/xmlenc/xmlenc/0.52">
+    <property name="xmlenc:xmlenc:jar" value="C:\Users\mio\.m2\repository\xmlenc\xmlenc\0.52\xmlenc-0.52.jar"/>
+    <fileset id="xmlenc:xmlenc:jar" dir="C:\Users\mio\.m2\repository\xmlenc\xmlenc\0.52">
       <include name="xmlenc-0.52.jar"/>
     </fileset>
-    <property name="commons-httpclient:commons-httpclient:jar" value="/Users/ouyanglingzhi/.m2/repository/commons-httpclient/commons-httpclient/3.0.1/commons-httpclient-3.0.1.jar"/>
-    <fileset id="commons-httpclient:commons-httpclient:jar" dir="/Users/ouyanglingzhi/.m2/repository/commons-httpclient/commons-httpclient/3.0.1">
+    <property name="commons-httpclient:commons-httpclient:jar" value="C:\Users\mio\.m2\repository\commons-httpclient\commons-httpclient\3.0.1\commons-httpclient-3.0.1.jar"/>
+    <fileset id="commons-httpclient:commons-httpclient:jar" dir="C:\Users\mio\.m2\repository\commons-httpclient\commons-httpclient\3.0.1">
       <include name="commons-httpclient-3.0.1.jar"/>
     </fileset>
-    <property name="commons-codec:commons-codec:jar" value="/Users/ouyanglingzhi/.m2/repository/commons-codec/commons-codec/1.4/commons-codec-1.4.jar"/>
-    <fileset id="commons-codec:commons-codec:jar" dir="/Users/ouyanglingzhi/.m2/repository/commons-codec/commons-codec/1.4">
+    <property name="commons-codec:commons-codec:jar" value="C:\Users\mio\.m2\repository\commons-codec\commons-codec\1.4\commons-codec-1.4.jar"/>
+    <fileset id="commons-codec:commons-codec:jar" dir="C:\Users\mio\.m2\repository\commons-codec\commons-codec\1.4">
       <include name="commons-codec-1.4.jar"/>
     </fileset>
-    <property name="org.apache.commons:commons-math:jar" value="/Users/ouyanglingzhi/.m2/repository/org/apache/commons/commons-math/2.1/commons-math-2.1.jar"/>
-    <fileset id="org.apache.commons:commons-math:jar" dir="/Users/ouyanglingzhi/.m2/repository/org/apache/commons/commons-math/2.1">
+    <property name="org.apache.commons:commons-math:jar" value="C:\Users\mio\.m2\repository\org\apache\commons\commons-math\2.1\commons-math-2.1.jar"/>
+    <fileset id="org.apache.commons:commons-math:jar" dir="C:\Users\mio\.m2\repository\org\apache\commons\commons-math\2.1">
       <include name="commons-math-2.1.jar"/>
     </fileset>
-    <property name="commons-configuration:commons-configuration:jar" value="/Users/ouyanglingzhi/.m2/repository/commons-configuration/commons-configuration/1.6/commons-configuration-1.6.jar"/>
-    <fileset id="commons-configuration:commons-configuration:jar" dir="/Users/ouyanglingzhi/.m2/repository/commons-configuration/commons-configuration/1.6">
+    <property name="commons-configuration:commons-configuration:jar" value="C:\Users\mio\.m2\repository\commons-configuration\commons-configuration\1.6\commons-configuration-1.6.jar"/>
+    <fileset id="commons-configuration:commons-configuration:jar" dir="C:\Users\mio\.m2\repository\commons-configuration\commons-configuration\1.6">
       <include name="commons-configuration-1.6.jar"/>
     </fileset>
-    <property name="commons-lang:commons-lang:jar" value="/Users/ouyanglingzhi/.m2/repository/commons-lang/commons-lang/2.4/commons-lang-2.4.jar"/>
-    <fileset id="commons-lang:commons-lang:jar" dir="/Users/ouyanglingzhi/.m2/repository/commons-lang/commons-lang/2.4">
+    <property name="commons-lang:commons-lang:jar" value="C:\Users\mio\.m2\repository\commons-lang\commons-lang\2.4\commons-lang-2.4.jar"/>
+    <fileset id="commons-lang:commons-lang:jar" dir="C:\Users\mio\.m2\repository\commons-lang\commons-lang\2.4">
       <include name="commons-lang-2.4.jar"/>
     </fileset>
-    <property name="commons-digester:commons-digester:jar" value="/Users/ouyanglingzhi/.m2/repository/commons-digester/commons-digester/1.8/commons-digester-1.8.jar"/>
-    <fileset id="commons-digester:commons-digester:jar" dir="/Users/ouyanglingzhi/.m2/repository/commons-digester/commons-digester/1.8">
+    <property name="commons-digester:commons-digester:jar" value="C:\Users\mio\.m2\repository\commons-digester\commons-digester\1.8\commons-digester-1.8.jar"/>
+    <fileset id="commons-digester:commons-digester:jar" dir="C:\Users\mio\.m2\repository\commons-digester\commons-digester\1.8">
       <include name="commons-digester-1.8.jar"/>
     </fileset>
-    <property name="commons-beanutils:commons-beanutils:jar" value="/Users/ouyanglingzhi/.m2/repository/commons-beanutils/commons-beanutils/1.7.0/commons-beanutils-1.7.0.jar"/>
-    <fileset id="commons-beanutils:commons-beanutils:jar" dir="/Users/ouyanglingzhi/.m2/repository/commons-beanutils/commons-beanutils/1.7.0">
+    <property name="commons-beanutils:commons-beanutils:jar" value="C:\Users\mio\.m2\repository\commons-beanutils\commons-beanutils\1.7.0\commons-beanutils-1.7.0.jar"/>
+    <fileset id="commons-beanutils:commons-beanutils:jar" dir="C:\Users\mio\.m2\repository\commons-beanutils\commons-beanutils\1.7.0">
       <include name="commons-beanutils-1.7.0.jar"/>
     </fileset>
-    <property name="commons-beanutils:commons-beanutils-core:jar" value="/Users/ouyanglingzhi/.m2/repository/commons-beanutils/commons-beanutils-core/1.8.0/commons-beanutils-core-1.8.0.jar"/>
-    <fileset id="commons-beanutils:commons-beanutils-core:jar" dir="/Users/ouyanglingzhi/.m2/repository/commons-beanutils/commons-beanutils-core/1.8.0">
+    <property name="commons-beanutils:commons-beanutils-core:jar" value="C:\Users\mio\.m2\repository\commons-beanutils\commons-beanutils-core\1.8.0\commons-beanutils-core-1.8.0.jar"/>
+    <fileset id="commons-beanutils:commons-beanutils-core:jar" dir="C:\Users\mio\.m2\repository\commons-beanutils\commons-beanutils-core\1.8.0">
       <include name="commons-beanutils-core-1.8.0.jar"/>
     </fileset>
-    <property name="commons-net:commons-net:jar" value="/Users/ouyanglingzhi/.m2/repository/commons-net/commons-net/1.4.1/commons-net-1.4.1.jar"/>
-    <fileset id="commons-net:commons-net:jar" dir="/Users/ouyanglingzhi/.m2/repository/commons-net/commons-net/1.4.1">
+    <property name="commons-net:commons-net:jar" value="C:\Users\mio\.m2\repository\commons-net\commons-net\1.4.1\commons-net-1.4.1.jar"/>
+    <fileset id="commons-net:commons-net:jar" dir="C:\Users\mio\.m2\repository\commons-net\commons-net\1.4.1">
       <include name="commons-net-1.4.1.jar"/>
     </fileset>
-    <property name="oro:oro:jar" value="/Users/ouyanglingzhi/.m2/repository/oro/oro/2.0.8/oro-2.0.8.jar"/>
-    <fileset id="oro:oro:jar" dir="/Users/ouyanglingzhi/.m2/repository/oro/oro/2.0.8">
+    <property name="oro:oro:jar" value="C:\Users\mio\.m2\repository\oro\oro\2.0.8\oro-2.0.8.jar"/>
+    <fileset id="oro:oro:jar" dir="C:\Users\mio\.m2\repository\oro\oro\2.0.8">
       <include name="oro-2.0.8.jar"/>
     </fileset>
-    <property name="org.mortbay.jetty:jetty:jar" value="/Users/ouyanglingzhi/.m2/repository/org/mortbay/jetty/jetty/6.1.26/jetty-6.1.26.jar"/>
-    <fileset id="org.mortbay.jetty:jetty:jar" dir="/Users/ouyanglingzhi/.m2/repository/org/mortbay/jetty/jetty/6.1.26">
+    <property name="org.mortbay.jetty:jetty:jar" value="C:\Users\mio\.m2\repository\org\mortbay\jetty\jetty\6.1.26\jetty-6.1.26.jar"/>
+    <fileset id="org.mortbay.jetty:jetty:jar" dir="C:\Users\mio\.m2\repository\org\mortbay\jetty\jetty\6.1.26">
       <include name="jetty-6.1.26.jar"/>
     </fileset>
-    <property name="org.mortbay.jetty:jetty-util:jar" value="/Users/ouyanglingzhi/.m2/repository/org/mortbay/jetty/jetty-util/6.1.26/jetty-util-6.1.26.jar"/>
-    <fileset id="org.mortbay.jetty:jetty-util:jar" dir="/Users/ouyanglingzhi/.m2/repository/org/mortbay/jetty/jetty-util/6.1.26">
+    <property name="org.mortbay.jetty:jetty-util:jar" value="C:\Users\mio\.m2\repository\org\mortbay\jetty\jetty-util\6.1.26\jetty-util-6.1.26.jar"/>
+    <fileset id="org.mortbay.jetty:jetty-util:jar" dir="C:\Users\mio\.m2\repository\org\mortbay\jetty\jetty-util\6.1.26">
       <include name="jetty-util-6.1.26.jar"/>
     </fileset>
-    <property name="tomcat:jasper-runtime:jar" value="/Users/ouyanglingzhi/.m2/repository/tomcat/jasper-runtime/5.5.12/jasper-runtime-5.5.12.jar"/>
-    <fileset id="tomcat:jasper-runtime:jar" dir="/Users/ouyanglingzhi/.m2/repository/tomcat/jasper-runtime/5.5.12">
+    <property name="tomcat:jasper-runtime:jar" value="C:\Users\mio\.m2\repository\tomcat\jasper-runtime\5.5.12\jasper-runtime-5.5.12.jar"/>
+    <fileset id="tomcat:jasper-runtime:jar" dir="C:\Users\mio\.m2\repository\tomcat\jasper-runtime\5.5.12">
       <include name="jasper-runtime-5.5.12.jar"/>
     </fileset>
-    <property name="tomcat:jasper-compiler:jar" value="/Users/ouyanglingzhi/.m2/repository/tomcat/jasper-compiler/5.5.12/jasper-compiler-5.5.12.jar"/>
-    <fileset id="tomcat:jasper-compiler:jar" dir="/Users/ouyanglingzhi/.m2/repository/tomcat/jasper-compiler/5.5.12">
+    <property name="tomcat:jasper-compiler:jar" value="C:\Users\mio\.m2\repository\tomcat\jasper-compiler\5.5.12\jasper-compiler-5.5.12.jar"/>
+    <fileset id="tomcat:jasper-compiler:jar" dir="C:\Users\mio\.m2\repository\tomcat\jasper-compiler\5.5.12">
       <include name="jasper-compiler-5.5.12.jar"/>
     </fileset>
-    <property name="org.mortbay.jetty:jsp-api-2.1:jar" value="/Users/ouyanglingzhi/.m2/repository/org/mortbay/jetty/jsp-api-2.1/6.1.14/jsp-api-2.1-6.1.14.jar"/>
-    <fileset id="org.mortbay.jetty:jsp-api-2.1:jar" dir="/Users/ouyanglingzhi/.m2/repository/org/mortbay/jetty/jsp-api-2.1/6.1.14">
+    <property name="org.mortbay.jetty:jsp-api-2.1:jar" value="C:\Users\mio\.m2\repository\org\mortbay\jetty\jsp-api-2.1\6.1.14\jsp-api-2.1-6.1.14.jar"/>
+    <fileset id="org.mortbay.jetty:jsp-api-2.1:jar" dir="C:\Users\mio\.m2\repository\org\mortbay\jetty\jsp-api-2.1\6.1.14">
       <include name="jsp-api-2.1-6.1.14.jar"/>
     </fileset>
-    <property name="org.mortbay.jetty:servlet-api-2.5:jar" value="/Users/ouyanglingzhi/.m2/repository/org/mortbay/jetty/servlet-api-2.5/6.1.14/servlet-api-2.5-6.1.14.jar"/>
-    <fileset id="org.mortbay.jetty:servlet-api-2.5:jar" dir="/Users/ouyanglingzhi/.m2/repository/org/mortbay/jetty/servlet-api-2.5/6.1.14">
+    <property name="org.mortbay.jetty:servlet-api-2.5:jar" value="C:\Users\mio\.m2\repository\org\mortbay\jetty\servlet-api-2.5\6.1.14\servlet-api-2.5-6.1.14.jar"/>
+    <fileset id="org.mortbay.jetty:servlet-api-2.5:jar" dir="C:\Users\mio\.m2\repository\org\mortbay\jetty\servlet-api-2.5\6.1.14">
       <include name="servlet-api-2.5-6.1.14.jar"/>
     </fileset>
-    <property name="org.mortbay.jetty:jsp-2.1:jar" value="/Users/ouyanglingzhi/.m2/repository/org/mortbay/jetty/jsp-2.1/6.1.14/jsp-2.1-6.1.14.jar"/>
-    <fileset id="org.mortbay.jetty:jsp-2.1:jar" dir="/Users/ouyanglingzhi/.m2/repository/org/mortbay/jetty/jsp-2.1/6.1.14">
+    <property name="org.mortbay.jetty:jsp-2.1:jar" value="C:\Users\mio\.m2\repository\org\mortbay\jetty\jsp-2.1\6.1.14\jsp-2.1-6.1.14.jar"/>
+    <fileset id="org.mortbay.jetty:jsp-2.1:jar" dir="C:\Users\mio\.m2\repository\org\mortbay\jetty\jsp-2.1\6.1.14">
       <include name="jsp-2.1-6.1.14.jar"/>
     </fileset>
-    <property name="commons-el:commons-el:jar" value="/Users/ouyanglingzhi/.m2/repository/commons-el/commons-el/1.0/commons-el-1.0.jar"/>
-    <fileset id="commons-el:commons-el:jar" dir="/Users/ouyanglingzhi/.m2/repository/commons-el/commons-el/1.0">
+    <property name="commons-el:commons-el:jar" value="C:\Users\mio\.m2\repository\commons-el\commons-el\1.0\commons-el-1.0.jar"/>
+    <fileset id="commons-el:commons-el:jar" dir="C:\Users\mio\.m2\repository\commons-el\commons-el\1.0">
       <include name="commons-el-1.0.jar"/>
     </fileset>
-    <property name="net.java.dev.jets3t:jets3t:jar" value="/Users/ouyanglingzhi/.m2/repository/net/java/dev/jets3t/jets3t/0.7.1/jets3t-0.7.1.jar"/>
-    <fileset id="net.java.dev.jets3t:jets3t:jar" dir="/Users/ouyanglingzhi/.m2/repository/net/java/dev/jets3t/jets3t/0.7.1">
+    <property name="net.java.dev.jets3t:jets3t:jar" value="C:\Users\mio\.m2\repository\net\java\dev\jets3t\jets3t\0.7.1\jets3t-0.7.1.jar"/>
+    <fileset id="net.java.dev.jets3t:jets3t:jar" dir="C:\Users\mio\.m2\repository\net\java\dev\jets3t\jets3t\0.7.1">
       <include name="jets3t-0.7.1.jar"/>
     </fileset>
-    <property name="net.sf.kosmosfs:kfs:jar" value="/Users/ouyanglingzhi/.m2/repository/net/sf/kosmosfs/kfs/0.3/kfs-0.3.jar"/>
-    <fileset id="net.sf.kosmosfs:kfs:jar" dir="/Users/ouyanglingzhi/.m2/repository/net/sf/kosmosfs/kfs/0.3">
+    <property name="net.sf.kosmosfs:kfs:jar" value="C:\Users\mio\.m2\repository\net\sf\kosmosfs\kfs\0.3\kfs-0.3.jar"/>
+    <fileset id="net.sf.kosmosfs:kfs:jar" dir="C:\Users\mio\.m2\repository\net\sf\kosmosfs\kfs\0.3">
       <include name="kfs-0.3.jar"/>
     </fileset>
-    <property name="hsqldb:hsqldb:jar" value="/Users/ouyanglingzhi/.m2/repository/hsqldb/hsqldb/1.8.0.10/hsqldb-1.8.0.10.jar"/>
-    <fileset id="hsqldb:hsqldb:jar" dir="/Users/ouyanglingzhi/.m2/repository/hsqldb/hsqldb/1.8.0.10">
+    <property name="hsqldb:hsqldb:jar" value="C:\Users\mio\.m2\repository\hsqldb\hsqldb\1.8.0.10\hsqldb-1.8.0.10.jar"/>
+    <fileset id="hsqldb:hsqldb:jar" dir="C:\Users\mio\.m2\repository\hsqldb\hsqldb\1.8.0.10">
       <include name="hsqldb-1.8.0.10.jar"/>
     </fileset>
-    <property name="org.codehaus.jackson:jackson-mapper-asl:jar" value="/Users/ouyanglingzhi/.m2/repository/org/codehaus/jackson/jackson-mapper-asl/1.0.1/jackson-mapper-asl-1.0.1.jar"/>
-    <fileset id="org.codehaus.jackson:jackson-mapper-asl:jar" dir="/Users/ouyanglingzhi/.m2/repository/org/codehaus/jackson/jackson-mapper-asl/1.0.1">
+    <property name="org.codehaus.jackson:jackson-mapper-asl:jar" value="C:\Users\mio\.m2\repository\org\codehaus\jackson\jackson-mapper-asl\1.0.1\jackson-mapper-asl-1.0.1.jar"/>
+    <fileset id="org.codehaus.jackson:jackson-mapper-asl:jar" dir="C:\Users\mio\.m2\repository\org\codehaus\jackson\jackson-mapper-asl\1.0.1">
       <include name="jackson-mapper-asl-1.0.1.jar"/>
     </fileset>
-    <property name="org.codehaus.jackson:jackson-core-asl:jar" value="/Users/ouyanglingzhi/.m2/repository/org/codehaus/jackson/jackson-core-asl/1.0.1/jackson-core-asl-1.0.1.jar"/>
-    <fileset id="org.codehaus.jackson:jackson-core-asl:jar" dir="/Users/ouyanglingzhi/.m2/repository/org/codehaus/jackson/jackson-core-asl/1.0.1">
+    <property name="org.codehaus.jackson:jackson-core-asl:jar" value="C:\Users\mio\.m2\repository\org\codehaus\jackson\jackson-core-asl\1.0.1\jackson-core-asl-1.0.1.jar"/>
+    <fileset id="org.codehaus.jackson:jackson-core-asl:jar" dir="C:\Users\mio\.m2\repository\org\codehaus\jackson\jackson-core-asl\1.0.1">
       <include name="jackson-core-asl-1.0.1.jar"/>
     </fileset>
-    <property name="org.apache.hadoop:hadoop-minicluster:jar" value="/Users/ouyanglingzhi/.m2/repository/org/apache/hadoop/hadoop-minicluster/1.0.3/hadoop-minicluster-1.0.3.jar"/>
-    <fileset id="org.apache.hadoop:hadoop-minicluster:jar" dir="/Users/ouyanglingzhi/.m2/repository/org/apache/hadoop/hadoop-minicluster/1.0.3">
+    <property name="org.apache.hadoop:hadoop-minicluster:jar" value="C:\Users\mio\.m2\repository\org\apache\hadoop\hadoop-minicluster\1.0.3\hadoop-minicluster-1.0.3.jar"/>
+    <fileset id="org.apache.hadoop:hadoop-minicluster:jar" dir="C:\Users\mio\.m2\repository\org\apache\hadoop\hadoop-minicluster\1.0.3">
       <include name="hadoop-minicluster-1.0.3.jar"/>
     </fileset>
-    <property name="org.apache.hadoop:hadoop-test:jar" value="/Users/ouyanglingzhi/.m2/repository/org/apache/hadoop/hadoop-test/1.0.3/hadoop-test-1.0.3.jar"/>
-    <fileset id="org.apache.hadoop:hadoop-test:jar" dir="/Users/ouyanglingzhi/.m2/repository/org/apache/hadoop/hadoop-test/1.0.3">
+    <property name="org.apache.hadoop:hadoop-test:jar" value="C:\Users\mio\.m2\repository\org\apache\hadoop\hadoop-test\1.0.3\hadoop-test-1.0.3.jar"/>
+    <fileset id="org.apache.hadoop:hadoop-test:jar" dir="C:\Users\mio\.m2\repository\org\apache\hadoop\hadoop-test\1.0.3">
       <include name="hadoop-test-1.0.3.jar"/>
     </fileset>
-    <property name="org.apache.ftpserver:ftplet-api:jar" value="/Users/ouyanglingzhi/.m2/repository/org/apache/ftpserver/ftplet-api/1.0.0/ftplet-api-1.0.0.jar"/>
-    <fileset id="org.apache.ftpserver:ftplet-api:jar" dir="/Users/ouyanglingzhi/.m2/repository/org/apache/ftpserver/ftplet-api/1.0.0">
+    <property name="org.apache.ftpserver:ftplet-api:jar" value="C:\Users\mio\.m2\repository\org\apache\ftpserver\ftplet-api\1.0.0\ftplet-api-1.0.0.jar"/>
+    <fileset id="org.apache.ftpserver:ftplet-api:jar" dir="C:\Users\mio\.m2\repository\org\apache\ftpserver\ftplet-api\1.0.0">
       <include name="ftplet-api-1.0.0.jar"/>
     </fileset>
-    <property name="org.apache.mina:mina-core:jar" value="/Users/ouyanglingzhi/.m2/repository/org/apache/mina/mina-core/2.0.0-M5/mina-core-2.0.0-M5.jar"/>
-    <fileset id="org.apache.mina:mina-core:jar" dir="/Users/ouyanglingzhi/.m2/repository/org/apache/mina/mina-core/2.0.0-M5">
+    <property name="org.apache.mina:mina-core:jar" value="C:\Users\mio\.m2\repository\org\apache\mina\mina-core\2.0.0-M5\mina-core-2.0.0-M5.jar"/>
+    <fileset id="org.apache.mina:mina-core:jar" dir="C:\Users\mio\.m2\repository\org\apache\mina\mina-core\2.0.0-M5">
       <include name="mina-core-2.0.0-M5.jar"/>
     </fileset>
-    <property name="org.slf4j:slf4j-api:jar" value="/Users/ouyanglingzhi/.m2/repository/org/slf4j/slf4j-api/1.7.12/slf4j-api-1.7.12.jar"/>
-    <fileset id="org.slf4j:slf4j-api:jar" dir="/Users/ouyanglingzhi/.m2/repository/org/slf4j/slf4j-api/1.7.12">
+    <property name="org.slf4j:slf4j-api:jar" value="C:\Users\mio\.m2\repository\org\slf4j\slf4j-api\1.7.12\slf4j-api-1.7.12.jar"/>
+    <fileset id="org.slf4j:slf4j-api:jar" dir="C:\Users\mio\.m2\repository\org\slf4j\slf4j-api\1.7.12">
       <include name="slf4j-api-1.7.12.jar"/>
     </fileset>
-    <property name="org.apache.ftpserver:ftpserver-core:jar" value="/Users/ouyanglingzhi/.m2/repository/org/apache/ftpserver/ftpserver-core/1.0.0/ftpserver-core-1.0.0.jar"/>
-    <fileset id="org.apache.ftpserver:ftpserver-core:jar" dir="/Users/ouyanglingzhi/.m2/repository/org/apache/ftpserver/ftpserver-core/1.0.0">
+    <property name="org.apache.ftpserver:ftpserver-core:jar" value="C:\Users\mio\.m2\repository\org\apache\ftpserver\ftpserver-core\1.0.0\ftpserver-core-1.0.0.jar"/>
+    <fileset id="org.apache.ftpserver:ftpserver-core:jar" dir="C:\Users\mio\.m2\repository\org\apache\ftpserver\ftpserver-core\1.0.0">
       <include name="ftpserver-core-1.0.0.jar"/>
     </fileset>
-    <property name="org.apache.ftpserver:ftpserver-deprecated:jar" value="/Users/ouyanglingzhi/.m2/repository/org/apache/ftpserver/ftpserver-deprecated/1.0.0-M2/ftpserver-deprecated-1.0.0-M2.jar"/>
-    <fileset id="org.apache.ftpserver:ftpserver-deprecated:jar" dir="/Users/ouyanglingzhi/.m2/repository/org/apache/ftpserver/ftpserver-deprecated/1.0.0-M2">
+    <property name="org.apache.ftpserver:ftpserver-deprecated:jar" value="C:\Users\mio\.m2\repository\org\apache\ftpserver\ftpserver-deprecated\1.0.0-M2\ftpserver-deprecated-1.0.0-M2.jar"/>
+    <fileset id="org.apache.ftpserver:ftpserver-deprecated:jar" dir="C:\Users\mio\.m2\repository\org\apache\ftpserver\ftpserver-deprecated\1.0.0-M2">
       <include name="ftpserver-deprecated-1.0.0-M2.jar"/>
     </fileset>
-    <property name="com.sun.jersey:jersey-server:jar" value="/Users/ouyanglingzhi/.m2/repository/com/sun/jersey/jersey-server/1.0/jersey-server-1.0.jar"/>
-    <fileset id="com.sun.jersey:jersey-server:jar" dir="/Users/ouyanglingzhi/.m2/repository/com/sun/jersey/jersey-server/1.0">
+    <property name="com.sun.jersey:jersey-server:jar" value="C:\Users\mio\.m2\repository\com\sun\jersey\jersey-server\1.0\jersey-server-1.0.jar"/>
+    <fileset id="com.sun.jersey:jersey-server:jar" dir="C:\Users\mio\.m2\repository\com\sun\jersey\jersey-server\1.0">
       <include name="jersey-server-1.0.jar"/>
     </fileset>
-    <property name="com.sun.jersey:jersey-core:jar" value="/Users/ouyanglingzhi/.m2/repository/com/sun/jersey/jersey-core/1.0/jersey-core-1.0.jar"/>
-    <fileset id="com.sun.jersey:jersey-core:jar" dir="/Users/ouyanglingzhi/.m2/repository/com/sun/jersey/jersey-core/1.0">
+    <property name="com.sun.jersey:jersey-core:jar" value="C:\Users\mio\.m2\repository\com\sun\jersey\jersey-core\1.0\jersey-core-1.0.jar"/>
+    <fileset id="com.sun.jersey:jersey-core:jar" dir="C:\Users\mio\.m2\repository\com\sun\jersey\jersey-core\1.0">
       <include name="jersey-core-1.0.jar"/>
     </fileset>
-    <property name="javax.ws.rs:jsr311-api:jar" value="/Users/ouyanglingzhi/.m2/repository/javax/ws/rs/jsr311-api/1.0/jsr311-api-1.0.jar"/>
-    <fileset id="javax.ws.rs:jsr311-api:jar" dir="/Users/ouyanglingzhi/.m2/repository/javax/ws/rs/jsr311-api/1.0">
+    <property name="javax.ws.rs:jsr311-api:jar" value="C:\Users\mio\.m2\repository\javax\ws\rs\jsr311-api\1.0\jsr311-api-1.0.jar"/>
+    <fileset id="javax.ws.rs:jsr311-api:jar" dir="C:\Users\mio\.m2\repository\javax\ws\rs\jsr311-api\1.0">
       <include name="jsr311-api-1.0.jar"/>
     </fileset>
-    <property name="com.google.code.findbugs:jsr305:jar" value="/Users/ouyanglingzhi/.m2/repository/com/google/code/findbugs/jsr305/2.0.2/jsr305-2.0.2.jar"/>
-    <fileset id="com.google.code.findbugs:jsr305:jar" dir="/Users/ouyanglingzhi/.m2/repository/com/google/code/findbugs/jsr305/2.0.2">
+    <property name="com.google.code.findbugs:jsr305:jar" value="C:\Users\mio\.m2\repository\com\google\code\findbugs\jsr305\2.0.2\jsr305-2.0.2.jar"/>
+    <fileset id="com.google.code.findbugs:jsr305:jar" dir="C:\Users\mio\.m2\repository\com\google\code\findbugs\jsr305\2.0.2">
       <include name="jsr305-2.0.2.jar"/>
     </fileset>
-    <property name="org.antlr:antlr:jar" value="/Users/ouyanglingzhi/.m2/repository/org/antlr/antlr/3.5.2/antlr-3.5.2.jar"/>
-    <fileset id="org.antlr:antlr:jar" dir="/Users/ouyanglingzhi/.m2/repository/org/antlr/antlr/3.5.2">
+    <property name="org.antlr:antlr:jar" value="C:\Users\mio\.m2\repository\org\antlr\antlr\3.5.2\antlr-3.5.2.jar"/>
+    <fileset id="org.antlr:antlr:jar" dir="C:\Users\mio\.m2\repository\org\antlr\antlr\3.5.2">
       <include name="antlr-3.5.2.jar"/>
     </fileset>
-    <property name="org.antlr:antlr-runtime:jar" value="/Users/ouyanglingzhi/.m2/repository/org/antlr/antlr-runtime/3.5.2/antlr-runtime-3.5.2.jar"/>
-    <fileset id="org.antlr:antlr-runtime:jar" dir="/Users/ouyanglingzhi/.m2/repository/org/antlr/antlr-runtime/3.5.2">
+    <property name="org.antlr:antlr-runtime:jar" value="C:\Users\mio\.m2\repository\org\antlr\antlr-runtime\3.5.2\antlr-runtime-3.5.2.jar"/>
+    <fileset id="org.antlr:antlr-runtime:jar" dir="C:\Users\mio\.m2\repository\org\antlr\antlr-runtime\3.5.2">
       <include name="antlr-runtime-3.5.2.jar"/>
     </fileset>
-    <property name="org.antlr:ST4:jar" value="/Users/ouyanglingzhi/.m2/repository/org/antlr/ST4/4.0.8/ST4-4.0.8.jar"/>
-    <fileset id="org.antlr:ST4:jar" dir="/Users/ouyanglingzhi/.m2/repository/org/antlr/ST4/4.0.8">
+    <property name="org.antlr:ST4:jar" value="C:\Users\mio\.m2\repository\org\antlr\ST4\4.0.8\ST4-4.0.8.jar"/>
+    <fileset id="org.antlr:ST4:jar" dir="C:\Users\mio\.m2\repository\org\antlr\ST4\4.0.8">
       <include name="ST4-4.0.8.jar"/>
     </fileset>
-    <property name="com.datastax.cassandra:cassandra-driver-core:jar:shaded" value="/Users/ouyanglingzhi/.m2/repository/com/datastax/cassandra/cassandra-driver-core/3.0.1/cassandra-driver-core-3.0.1-shaded.jar"/>
-    <fileset id="com.datastax.cassandra:cassandra-driver-core:jar:shaded" dir="/Users/ouyanglingzhi/.m2/repository/com/datastax/cassandra/cassandra-driver-core/3.0.1">
+    <property name="com.datastax.cassandra:cassandra-driver-core:jar:shaded" value="C:\Users\mio\.m2\repository\com\datastax\cassandra\cassandra-driver-core\3.0.1\cassandra-driver-core-3.0.1-shaded.jar"/>
+    <fileset id="com.datastax.cassandra:cassandra-driver-core:jar:shaded" dir="C:\Users\mio\.m2\repository\com\datastax\cassandra\cassandra-driver-core\3.0.1">
       <include name="cassandra-driver-core-3.0.1-shaded.jar"/>
     </fileset>
-    <property name="io.netty:netty-handler:jar" value="/Users/ouyanglingzhi/.m2/repository/io/netty/netty-handler/4.0.33.Final/netty-handler-4.0.33.Final.jar"/>
-    <fileset id="io.netty:netty-handler:jar" dir="/Users/ouyanglingzhi/.m2/repository/io/netty/netty-handler/4.0.33.Final">
+    <property name="io.netty:netty-handler:jar" value="C:\Users\mio\.m2\repository\io\netty\netty-handler\4.0.33.Final\netty-handler-4.0.33.Final.jar"/>
+    <fileset id="io.netty:netty-handler:jar" dir="C:\Users\mio\.m2\repository\io\netty\netty-handler\4.0.33.Final">
       <include name="netty-handler-4.0.33.Final.jar"/>
     </fileset>
-    <property name="io.netty:netty-buffer:jar" value="/Users/ouyanglingzhi/.m2/repository/io/netty/netty-buffer/4.0.33.Final/netty-buffer-4.0.33.Final.jar"/>
-    <fileset id="io.netty:netty-buffer:jar" dir="/Users/ouyanglingzhi/.m2/repository/io/netty/netty-buffer/4.0.33.Final">
+    <property name="io.netty:netty-buffer:jar" value="C:\Users\mio\.m2\repository\io\netty\netty-buffer\4.0.33.Final\netty-buffer-4.0.33.Final.jar"/>
+    <fileset id="io.netty:netty-buffer:jar" dir="C:\Users\mio\.m2\repository\io\netty\netty-buffer\4.0.33.Final">
       <include name="netty-buffer-4.0.33.Final.jar"/>
     </fileset>
-    <property name="io.netty:netty-common:jar" value="/Users/ouyanglingzhi/.m2/repository/io/netty/netty-common/4.0.33.Final/netty-common-4.0.33.Final.jar"/>
-    <fileset id="io.netty:netty-common:jar" dir="/Users/ouyanglingzhi/.m2/repository/io/netty/netty-common/4.0.33.Final">
+    <property name="io.netty:netty-common:jar" value="C:\Users\mio\.m2\repository\io\netty\netty-common\4.0.33.Final\netty-common-4.0.33.Final.jar"/>
+    <fileset id="io.netty:netty-common:jar" dir="C:\Users\mio\.m2\repository\io\netty\netty-common\4.0.33.Final">
       <include name="netty-common-4.0.33.Final.jar"/>
     </fileset>
-    <property name="io.netty:netty-transport:jar" value="/Users/ouyanglingzhi/.m2/repository/io/netty/netty-transport/4.0.33.Final/netty-transport-4.0.33.Final.jar"/>
-    <fileset id="io.netty:netty-transport:jar" dir="/Users/ouyanglingzhi/.m2/repository/io/netty/netty-transport/4.0.33.Final">
+    <property name="io.netty:netty-transport:jar" value="C:\Users\mio\.m2\repository\io\netty\netty-transport\4.0.33.Final\netty-transport-4.0.33.Final.jar"/>
+    <fileset id="io.netty:netty-transport:jar" dir="C:\Users\mio\.m2\repository\io\netty\netty-transport\4.0.33.Final">
       <include name="netty-transport-4.0.33.Final.jar"/>
     </fileset>
-    <property name="io.netty:netty-codec:jar" value="/Users/ouyanglingzhi/.m2/repository/io/netty/netty-codec/4.0.33.Final/netty-codec-4.0.33.Final.jar"/>
-    <fileset id="io.netty:netty-codec:jar" dir="/Users/ouyanglingzhi/.m2/repository/io/netty/netty-codec/4.0.33.Final">
+    <property name="io.netty:netty-codec:jar" value="C:\Users\mio\.m2\repository\io\netty\netty-codec\4.0.33.Final\netty-codec-4.0.33.Final.jar"/>
+    <fileset id="io.netty:netty-codec:jar" dir="C:\Users\mio\.m2\repository\io\netty\netty-codec\4.0.33.Final">
       <include name="netty-codec-4.0.33.Final.jar"/>
     </fileset>
-    <property name="com.google.guava:guava:jar" value="/Users/ouyanglingzhi/.m2/repository/com/google/guava/guava/16.0.1/guava-16.0.1.jar"/>
-    <fileset id="com.google.guava:guava:jar" dir="/Users/ouyanglingzhi/.m2/repository/com/google/guava/guava/16.0.1">
+    <property name="com.google.guava:guava:jar" value="C:\Users\mio\.m2\repository\com\google\guava\guava\16.0.1\guava-16.0.1.jar"/>
+    <fileset id="com.google.guava:guava:jar" dir="C:\Users\mio\.m2\repository\com\google\guava\guava\16.0.1">
       <include name="guava-16.0.1.jar"/>
     </fileset>
-    <property name="io.dropwizard.metrics:metrics-core:jar" value="/Users/ouyanglingzhi/.m2/repository/io/dropwizard/metrics/metrics-core/3.1.2/metrics-core-3.1.2.jar"/>
-    <fileset id="io.dropwizard.metrics:metrics-core:jar" dir="/Users/ouyanglingzhi/.m2/repository/io/dropwizard/metrics/metrics-core/3.1.2">
+    <property name="io.dropwizard.metrics:metrics-core:jar" value="C:\Users\mio\.m2\repository\io\dropwizard\metrics\metrics-core\3.1.2\metrics-core-3.1.2.jar"/>
+    <fileset id="io.dropwizard.metrics:metrics-core:jar" dir="C:\Users\mio\.m2\repository\io\dropwizard\metrics\metrics-core\3.1.2">
       <include name="metrics-core-3.1.2.jar"/>
     </fileset>
-    <property name="org.eclipse.jdt.core.compiler:ecj:jar" value="/Users/ouyanglingzhi/.m2/repository/org/eclipse/jdt/core/compiler/ecj/4.4.2/ecj-4.4.2.jar"/>
-    <fileset id="org.eclipse.jdt.core.compiler:ecj:jar" dir="/Users/ouyanglingzhi/.m2/repository/org/eclipse/jdt/core/compiler/ecj/4.4.2">
+    <property name="org.eclipse.jdt.core.compiler:ecj:jar" value="C:\Users\mio\.m2\repository\org\eclipse\jdt\core\compiler\ecj\4.4.2\ecj-4.4.2.jar"/>
+    <fileset id="org.eclipse.jdt.core.compiler:ecj:jar" dir="C:\Users\mio\.m2\repository\org\eclipse\jdt\core\compiler\ecj\4.4.2">
       <include name="ecj-4.4.2.jar"/>
     </fileset>
-    <property name="org.caffinitas.ohc:ohc-core:jar" value="/Users/ouyanglingzhi/.m2/repository/org/caffinitas/ohc/ohc-core/0.4.3/ohc-core-0.4.3.jar"/>
-    <fileset id="org.caffinitas.ohc:ohc-core:jar" dir="/Users/ouyanglingzhi/.m2/repository/org/caffinitas/ohc/ohc-core/0.4.3">
+    <property name="org.caffinitas.ohc:ohc-core:jar" value="C:\Users\mio\.m2\repository\org\caffinitas\ohc\ohc-core\0.4.3\ohc-core-0.4.3.jar"/>
+    <fileset id="org.caffinitas.ohc:ohc-core:jar" dir="C:\Users\mio\.m2\repository\org\caffinitas\ohc\ohc-core\0.4.3">
       <include name="ohc-core-0.4.3.jar"/>
     </fileset>
-    <property name="net.java.dev.jna:jna:jar" value="/Users/ouyanglingzhi/.m2/repository/net/java/dev/jna/jna/4.1.0/jna-4.1.0.jar"/>
-    <fileset id="net.java.dev.jna:jna:jar" dir="/Users/ouyanglingzhi/.m2/repository/net/java/dev/jna/jna/4.1.0">
+    <property name="net.java.dev.jna:jna:jar" value="C:\Users\mio\.m2\repository\net\java\dev\jna\jna\4.1.0\jna-4.1.0.jar"/>
+    <fileset id="net.java.dev.jna:jna:jar" dir="C:\Users\mio\.m2\repository\net\java\dev\jna\jna\4.1.0">
       <include name="jna-4.1.0.jar"/>
     </fileset>
-    <property name="org.caffinitas.ohc:ohc-core-j8:jar" value="/Users/ouyanglingzhi/.m2/repository/org/caffinitas/ohc/ohc-core-j8/0.4.3/ohc-core-j8-0.4.3.jar"/>
-    <fileset id="org.caffinitas.ohc:ohc-core-j8:jar" dir="/Users/ouyanglingzhi/.m2/repository/org/caffinitas/ohc/ohc-core-j8/0.4.3">
+    <property name="org.caffinitas.ohc:ohc-core-j8:jar" value="C:\Users\mio\.m2\repository\org\caffinitas\ohc\ohc-core-j8\0.4.3\ohc-core-j8-0.4.3.jar"/>
+    <fileset id="org.caffinitas.ohc:ohc-core-j8:jar" dir="C:\Users\mio\.m2\repository\org\caffinitas\ohc\ohc-core-j8\0.4.3">
       <include name="ohc-core-j8-0.4.3.jar"/>
     </fileset>
-    <property name="org.openjdk.jmh:jmh-core:jar" value="/Users/ouyanglingzhi/.m2/repository/org/openjdk/jmh/jmh-core/1.1.1/jmh-core-1.1.1.jar"/>
-    <fileset id="org.openjdk.jmh:jmh-core:jar" dir="/Users/ouyanglingzhi/.m2/repository/org/openjdk/jmh/jmh-core/1.1.1">
+    <property name="org.openjdk.jmh:jmh-core:jar" value="C:\Users\mio\.m2\repository\org\openjdk\jmh\jmh-core\1.1.1\jmh-core-1.1.1.jar"/>
+    <fileset id="org.openjdk.jmh:jmh-core:jar" dir="C:\Users\mio\.m2\repository\org\openjdk\jmh\jmh-core\1.1.1">
       <include name="jmh-core-1.1.1.jar"/>
     </fileset>
-    <property name="net.sf.jopt-simple:jopt-simple:jar" value="/Users/ouyanglingzhi/.m2/repository/net/sf/jopt-simple/jopt-simple/4.6/jopt-simple-4.6.jar"/>
-    <fileset id="net.sf.jopt-simple:jopt-simple:jar" dir="/Users/ouyanglingzhi/.m2/repository/net/sf/jopt-simple/jopt-simple/4.6">
+    <property name="net.sf.jopt-simple:jopt-simple:jar" value="C:\Users\mio\.m2\repository\net\sf\jopt-simple\jopt-simple\4.6\jopt-simple-4.6.jar"/>
+    <fileset id="net.sf.jopt-simple:jopt-simple:jar" dir="C:\Users\mio\.m2\repository\net\sf\jopt-simple\jopt-simple\4.6">
       <include name="jopt-simple-4.6.jar"/>
     </fileset>
-    <property name="org.apache.commons:commons-math3:jar" value="/Users/ouyanglingzhi/.m2/repository/org/apache/commons/commons-math3/3.2/commons-math3-3.2.jar"/>
-    <fileset id="org.apache.commons:commons-math3:jar" dir="/Users/ouyanglingzhi/.m2/repository/org/apache/commons/commons-math3/3.2">
+    <property name="org.apache.commons:commons-math3:jar" value="C:\Users\mio\.m2\repository\org\apache\commons\commons-math3\3.2\commons-math3-3.2.jar"/>
+    <fileset id="org.apache.commons:commons-math3:jar" dir="C:\Users\mio\.m2\repository\org\apache\commons\commons-math3\3.2">
       <include name="commons-math3-3.2.jar"/>
     </fileset>
-    <property name="org.openjdk.jmh:jmh-generator-annprocess:jar" value="/Users/ouyanglingzhi/.m2/repository/org/openjdk/jmh/jmh-generator-annprocess/1.1.1/jmh-generator-annprocess-1.1.1.jar"/>
-    <fileset id="org.openjdk.jmh:jmh-generator-annprocess:jar" dir="/Users/ouyanglingzhi/.m2/repository/org/openjdk/jmh/jmh-generator-annprocess/1.1.1">
+    <property name="org.openjdk.jmh:jmh-generator-annprocess:jar" value="C:\Users\mio\.m2\repository\org\openjdk\jmh\jmh-generator-annprocess\1.1.1\jmh-generator-annprocess-1.1.1.jar"/>
+    <fileset id="org.openjdk.jmh:jmh-generator-annprocess:jar" dir="C:\Users\mio\.m2\repository\org\openjdk\jmh\jmh-generator-annprocess\1.1.1">
       <include name="jmh-generator-annprocess-1.1.1.jar"/>
     </fileset>
-    <property name="net.ju-n.compile-command-annotations:compile-command-annotations:jar" value="/Users/ouyanglingzhi/.m2/repository/net/ju-n/compile-command-annotations/compile-command-annotations/1.2.0/compile-command-annotations-1.2.0.jar"/>
-    <fileset id="net.ju-n.compile-command-annotations:compile-command-annotations:jar" dir="/Users/ouyanglingzhi/.m2/repository/net/ju-n/compile-command-annotations/compile-command-annotations/1.2.0">
+    <property name="net.ju-n.compile-command-annotations:compile-command-annotations:jar" value="C:\Users\mio\.m2\repository\net\ju-n\compile-command-annotations\compile-command-annotations\1.2.0\compile-command-annotations-1.2.0.jar"/>
+    <fileset id="net.ju-n.compile-command-annotations:compile-command-annotations:jar" dir="C:\Users\mio\.m2\repository\net\ju-n\compile-command-annotations\compile-command-annotations\1.2.0">
       <include name="compile-command-annotations-1.2.0.jar"/>
     </fileset>
-    <property name="org.apache.ant:ant-junit:jar" value="/Users/ouyanglingzhi/.m2/repository/org/apache/ant/ant-junit/1.9.4/ant-junit-1.9.4.jar"/>
-    <fileset id="org.apache.ant:ant-junit:jar" dir="/Users/ouyanglingzhi/.m2/repository/org/apache/ant/ant-junit/1.9.4">
+    <property name="org.apache.ant:ant-junit:jar" value="C:\Users\mio\.m2\repository\org\apache\ant\ant-junit\1.9.4\ant-junit-1.9.4.jar"/>
+    <fileset id="org.apache.ant:ant-junit:jar" dir="C:\Users\mio\.m2\repository\org\apache\ant\ant-junit\1.9.4">
       <include name="ant-junit-1.9.4.jar"/>
     </fileset>
-    <property name="org.apache.ant:ant:jar" value="/Users/ouyanglingzhi/.m2/repository/org/apache/ant/ant/1.9.4/ant-1.9.4.jar"/>
-    <fileset id="org.apache.ant:ant:jar" dir="/Users/ouyanglingzhi/.m2/repository/org/apache/ant/ant/1.9.4">
+    <property name="org.apache.ant:ant:jar" value="C:\Users\mio\.m2\repository\org\apache\ant\ant\1.9.4\ant-1.9.4.jar"/>
+    <fileset id="org.apache.ant:ant:jar" dir="C:\Users\mio\.m2\repository\org\apache\ant\ant\1.9.4">
       <include name="ant-1.9.4.jar"/>
     </fileset>
-    <property name="org.apache.ant:ant-launcher:jar" value="/Users/ouyanglingzhi/.m2/repository/org/apache/ant/ant-launcher/1.9.4/ant-launcher-1.9.4.jar"/>
-    <fileset id="org.apache.ant:ant-launcher:jar" dir="/Users/ouyanglingzhi/.m2/repository/org/apache/ant/ant-launcher/1.9.4">
+    <property name="org.apache.ant:ant-launcher:jar" value="C:\Users\mio\.m2\repository\org\apache\ant\ant-launcher\1.9.4\ant-launcher-1.9.4.jar"/>
+    <fileset id="org.apache.ant:ant-launcher:jar" dir="C:\Users\mio\.m2\repository\org\apache\ant\ant-launcher\1.9.4">
       <include name="ant-launcher-1.9.4.jar"/>
     </fileset>
-    <fileset id="build-dependency-jars" dir="/Users/ouyanglingzhi/.m2/repository">
-      <include name="com/datastax/cassandra/cassandra-driver-core/3.0.1/cassandra-driver-core-3.0.1-shaded.jar"/>
-      <include name="com/google/code/findbugs/jsr305/2.0.2/jsr305-2.0.2.jar"/>
-      <include name="com/google/guava/guava/16.0.1/guava-16.0.1.jar"/>
-      <include name="com/sun/jersey/jersey-core/1.0/jersey-core-1.0.jar"/>
-      <include name="com/sun/jersey/jersey-server/1.0/jersey-server-1.0.jar"/>
-      <include name="commons-beanutils/commons-beanutils-core/1.8.0/commons-beanutils-core-1.8.0.jar"/>
-      <include name="commons-beanutils/commons-beanutils/1.7.0/commons-beanutils-1.7.0.jar"/>
-      <include name="commons-cli/commons-cli/1.2/commons-cli-1.2.jar"/>
-      <include name="commons-codec/commons-codec/1.4/commons-codec-1.4.jar"/>
-      <include name="commons-collections/commons-collections/3.2.1/commons-collections-3.2.1.jar"/>
-      <include name="commons-configuration/commons-configuration/1.6/commons-configuration-1.6.jar"/>
-      <include name="commons-digester/commons-digester/1.8/commons-digester-1.8.jar"/>
-      <include name="commons-el/commons-el/1.0/commons-el-1.0.jar"/>
-      <include name="commons-httpclient/commons-httpclient/3.0.1/commons-httpclient-3.0.1.jar"/>
-      <include name="commons-io/commons-io/2.2/commons-io-2.2.jar"/>
-      <include name="commons-lang/commons-lang/2.4/commons-lang-2.4.jar"/>
-      <include name="commons-net/commons-net/1.4.1/commons-net-1.4.1.jar"/>
-      <include name="hsqldb/hsqldb/1.8.0.10/hsqldb-1.8.0.10.jar"/>
-      <include name="io/dropwizard/metrics/metrics-core/3.1.2/metrics-core-3.1.2.jar"/>
-      <include name="io/netty/netty-buffer/4.0.33.Final/netty-buffer-4.0.33.Final.jar"/>
-      <include name="io/netty/netty-codec/4.0.33.Final/netty-codec-4.0.33.Final.jar"/>
-      <include name="io/netty/netty-common/4.0.33.Final/netty-common-4.0.33.Final.jar"/>
-      <include name="io/netty/netty-handler/4.0.33.Final/netty-handler-4.0.33.Final.jar"/>
-      <include name="io/netty/netty-transport/4.0.33.Final/netty-transport-4.0.33.Final.jar"/>
-      <include name="javax/ws/rs/jsr311-api/1.0/jsr311-api-1.0.jar"/>
-      <include name="junit/junit/4.6/junit-4.6.jar"/>
-      <include name="net/java/dev/jets3t/jets3t/0.7.1/jets3t-0.7.1.jar"/>
-      <include name="net/java/dev/jna/jna/4.1.0/jna-4.1.0.jar"/>
-      <include name="net/ju-n/compile-command-annotations/compile-command-annotations/1.2.0/compile-command-annotations-1.2.0.jar"/>
-      <include name="net/sf/jopt-simple/jopt-simple/4.6/jopt-simple-4.6.jar"/>
-      <include name="net/sf/kosmosfs/kfs/0.3/kfs-0.3.jar"/>
-      <include name="org/antlr/ST4/4.0.8/ST4-4.0.8.jar"/>
-      <include name="org/antlr/antlr-runtime/3.5.2/antlr-runtime-3.5.2.jar"/>
-      <include name="org/antlr/antlr/3.5.2/antlr-3.5.2.jar"/>
-      <include name="org/apache/ant/ant-junit/1.9.4/ant-junit-1.9.4.jar"/>
-      <include name="org/apache/ant/ant-launcher/1.9.4/ant-launcher-1.9.4.jar"/>
-      <include name="org/apache/ant/ant/1.9.4/ant-1.9.4.jar"/>
-      <include name="org/apache/commons/commons-compress/1.5/commons-compress-1.5.jar"/>
-      <include name="org/apache/commons/commons-math/2.1/commons-math-2.1.jar"/>
-      <include name="org/apache/commons/commons-math3/3.2/commons-math3-3.2.jar"/>
-      <include name="org/apache/ftpserver/ftplet-api/1.0.0/ftplet-api-1.0.0.jar"/>
-      <include name="org/apache/ftpserver/ftpserver-core/1.0.0/ftpserver-core-1.0.0.jar"/>
-      <include name="org/apache/ftpserver/ftpserver-deprecated/1.0.0-M2/ftpserver-deprecated-1.0.0-M2.jar"/>
-      <include name="org/apache/hadoop/hadoop-core/1.0.3/hadoop-core-1.0.3.jar"/>
-      <include name="org/apache/hadoop/hadoop-minicluster/1.0.3/hadoop-minicluster-1.0.3.jar"/>
-      <include name="org/apache/hadoop/hadoop-test/1.0.3/hadoop-test-1.0.3.jar"/>
-      <include name="org/apache/mina/mina-core/2.0.0-M5/mina-core-2.0.0-M5.jar"/>
-      <include name="org/apache/rat/apache-rat-core/0.10/apache-rat-core-0.10.jar"/>
-      <include name="org/apache/rat/apache-rat-tasks/0.10/apache-rat-tasks-0.10.jar"/>
-      <include name="org/apache/rat/apache-rat/0.10/apache-rat-0.10.jar"/>
-      <include name="org/caffinitas/ohc/ohc-core-j8/0.4.3/ohc-core-j8-0.4.3.jar"/>
-      <include name="org/caffinitas/ohc/ohc-core/0.4.3/ohc-core-0.4.3.jar"/>
-      <include name="org/codehaus/jackson/jackson-core-asl/1.0.1/jackson-core-asl-1.0.1.jar"/>
-      <include name="org/codehaus/jackson/jackson-mapper-asl/1.0.1/jackson-mapper-asl-1.0.1.jar"/>
-      <include name="org/eclipse/jdt/core/compiler/ecj/4.4.2/ecj-4.4.2.jar"/>
-      <include name="org/mortbay/jetty/jetty-util/6.1.26/jetty-util-6.1.26.jar"/>
-      <include name="org/mortbay/jetty/jetty/6.1.26/jetty-6.1.26.jar"/>
-      <include name="org/mortbay/jetty/jsp-2.1/6.1.14/jsp-2.1-6.1.14.jar"/>
-      <include name="org/mortbay/jetty/jsp-api-2.1/6.1.14/jsp-api-2.1-6.1.14.jar"/>
-      <include name="org/mortbay/jetty/servlet-api-2.5/6.1.14/servlet-api-2.5-6.1.14.jar"/>
-      <include name="org/openjdk/jmh/jmh-core/1.1.1/jmh-core-1.1.1.jar"/>
-      <include name="org/openjdk/jmh/jmh-generator-annprocess/1.1.1/jmh-generator-annprocess-1.1.1.jar"/>
-      <include name="org/slf4j/slf4j-api/1.7.12/slf4j-api-1.7.12.jar"/>
-      <include name="oro/oro/2.0.8/oro-2.0.8.jar"/>
-      <include name="tomcat/jasper-compiler/5.5.12/jasper-compiler-5.5.12.jar"/>
-      <include name="tomcat/jasper-runtime/5.5.12/jasper-runtime-5.5.12.jar"/>
-      <include name="xmlenc/xmlenc/0.52/xmlenc-0.52.jar"/>
+    <fileset id="build-dependency-jars" dir="C:\Users\mio\.m2\repository">
+      <include name="com\datastax\cassandra\cassandra-driver-core\3.0.1\cassandra-driver-core-3.0.1-shaded.jar"/>
+      <include name="com\google\code\findbugs\jsr305\2.0.2\jsr305-2.0.2.jar"/>
+      <include name="com\google\guava\guava\16.0.1\guava-16.0.1.jar"/>
+      <include name="com\sun\jersey\jersey-core\1.0\jersey-core-1.0.jar"/>
+      <include name="com\sun\jersey\jersey-server\1.0\jersey-server-1.0.jar"/>
+      <include name="commons-beanutils\commons-beanutils-core\1.8.0\commons-beanutils-core-1.8.0.jar"/>
+      <include name="commons-beanutils\commons-beanutils\1.7.0\commons-beanutils-1.7.0.jar"/>
+      <include name="commons-cli\commons-cli\1.2\commons-cli-1.2.jar"/>
+      <include name="commons-codec\commons-codec\1.4\commons-codec-1.4.jar"/>
+      <include name="commons-collections\commons-collections\3.2.1\commons-collections-3.2.1.jar"/>
+      <include name="commons-configuration\commons-configuration\1.6\commons-configuration-1.6.jar"/>
+      <include name="commons-digester\commons-digester\1.8\commons-digester-1.8.jar"/>
+      <include name="commons-el\commons-el\1.0\commons-el-1.0.jar"/>
+      <include name="commons-httpclient\commons-httpclient\3.0.1\commons-httpclient-3.0.1.jar"/>
+      <include name="commons-io\commons-io\2.2\commons-io-2.2.jar"/>
+      <include name="commons-lang\commons-lang\2.4\commons-lang-2.4.jar"/>
+      <include name="commons-net\commons-net\1.4.1\commons-net-1.4.1.jar"/>
+      <include name="hsqldb\hsqldb\1.8.0.10\hsqldb-1.8.0.10.jar"/>
+      <include name="io\dropwizard\metrics\metrics-core\3.1.2\metrics-core-3.1.2.jar"/>
+      <include name="io\netty\netty-buffer\4.0.33.Final\netty-buffer-4.0.33.Final.jar"/>
+      <include name="io\netty\netty-codec\4.0.33.Final\netty-codec-4.0.33.Final.jar"/>
+      <include name="io\netty\netty-common\4.0.33.Final\netty-common-4.0.33.Final.jar"/>
+      <include name="io\netty\netty-handler\4.0.33.Final\netty-handler-4.0.33.Final.jar"/>
+      <include name="io\netty\netty-transport\4.0.33.Final\netty-transport-4.0.33.Final.jar"/>
+      <include name="javax\ws\rs\jsr311-api\1.0\jsr311-api-1.0.jar"/>
+      <include name="junit\junit\4.6\junit-4.6.jar"/>
+      <include name="net\java\dev\jets3t\jets3t\0.7.1\jets3t-0.7.1.jar"/>
+      <include name="net\java\dev\jna\jna\4.1.0\jna-4.1.0.jar"/>
+      <include name="net\ju-n\compile-command-annotations\compile-command-annotations\1.2.0\compile-command-annotations-1.2.0.jar"/>
+      <include name="net\sf\jopt-simple\jopt-simple\4.6\jopt-simple-4.6.jar"/>
+      <include name="net\sf\kosmosfs\kfs\0.3\kfs-0.3.jar"/>
+      <include name="org\antlr\ST4\4.0.8\ST4-4.0.8.jar"/>
+      <include name="org\antlr\antlr-runtime\3.5.2\antlr-runtime-3.5.2.jar"/>
+      <include name="org\antlr\antlr\3.5.2\antlr-3.5.2.jar"/>
+      <include name="org\apache\ant\ant-junit\1.9.4\ant-junit-1.9.4.jar"/>
+      <include name="org\apache\ant\ant-launcher\1.9.4\ant-launcher-1.9.4.jar"/>
+      <include name="org\apache\ant\ant\1.9.4\ant-1.9.4.jar"/>
+      <include name="org\apache\commons\commons-compress\1.5\commons-compress-1.5.jar"/>
+      <include name="org\apache\commons\commons-math3\3.2\commons-math3-3.2.jar"/>
+      <include name="org\apache\commons\commons-math\2.1\commons-math-2.1.jar"/>
+      <include name="org\apache\ftpserver\ftplet-api\1.0.0\ftplet-api-1.0.0.jar"/>
+      <include name="org\apache\ftpserver\ftpserver-core\1.0.0\ftpserver-core-1.0.0.jar"/>
+      <include name="org\apache\ftpserver\ftpserver-deprecated\1.0.0-M2\ftpserver-deprecated-1.0.0-M2.jar"/>
+      <include name="org\apache\hadoop\hadoop-core\1.0.3\hadoop-core-1.0.3.jar"/>
+      <include name="org\apache\hadoop\hadoop-minicluster\1.0.3\hadoop-minicluster-1.0.3.jar"/>
+      <include name="org\apache\hadoop\hadoop-test\1.0.3\hadoop-test-1.0.3.jar"/>
+      <include name="org\apache\mina\mina-core\2.0.0-M5\mina-core-2.0.0-M5.jar"/>
+      <include name="org\apache\rat\apache-rat-core\0.10\apache-rat-core-0.10.jar"/>
+      <include name="org\apache\rat\apache-rat-tasks\0.10\apache-rat-tasks-0.10.jar"/>
+      <include name="org\apache\rat\apache-rat\0.10\apache-rat-0.10.jar"/>
+      <include name="org\caffinitas\ohc\ohc-core-j8\0.4.3\ohc-core-j8-0.4.3.jar"/>
+      <include name="org\caffinitas\ohc\ohc-core\0.4.3\ohc-core-0.4.3.jar"/>
+      <include name="org\codehaus\jackson\jackson-core-asl\1.0.1\jackson-core-asl-1.0.1.jar"/>
+      <include name="org\codehaus\jackson\jackson-mapper-asl\1.0.1\jackson-mapper-asl-1.0.1.jar"/>
+      <include name="org\eclipse\jdt\core\compiler\ecj\4.4.2\ecj-4.4.2.jar"/>
+      <include name="org\mortbay\jetty\jetty-util\6.1.26\jetty-util-6.1.26.jar"/>
+      <include name="org\mortbay\jetty\jetty\6.1.26\jetty-6.1.26.jar"/>
+      <include name="org\mortbay\jetty\jsp-2.1\6.1.14\jsp-2.1-6.1.14.jar"/>
+      <include name="org\mortbay\jetty\jsp-api-2.1\6.1.14\jsp-api-2.1-6.1.14.jar"/>
+      <include name="org\mortbay\jetty\servlet-api-2.5\6.1.14\servlet-api-2.5-6.1.14.jar"/>
+      <include name="org\openjdk\jmh\jmh-core\1.1.1\jmh-core-1.1.1.jar"/>
+      <include name="org\openjdk\jmh\jmh-generator-annprocess\1.1.1\jmh-generator-annprocess-1.1.1.jar"/>
+      <include name="org\slf4j\slf4j-api\1.7.12\slf4j-api-1.7.12.jar"/>
+      <include name="oro\oro\2.0.8\oro-2.0.8.jar"/>
+      <include name="tomcat\jasper-compiler\5.5.12\jasper-compiler-5.5.12.jar"/>
+      <include name="tomcat\jasper-runtime\5.5.12\jasper-runtime-5.5.12.jar"/>
+      <include name="xmlenc\xmlenc\0.52\xmlenc-0.52.jar"/>
     </fileset>
   </target>
 </project>

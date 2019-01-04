@@ -1,113 +1,113 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project name="maven-dependencies" default="init-dependencies">
 <target name="init-dependencies">
-    <echo level="info" message="Loading dependency paths from file: /Users/ouyanglingzhi/Desktop/cassandra/build/build-dependencies-sources.xml"/>
-    <property name="junit:junit:jar" value="/Users/ouyanglingzhi/.m2/repository/junit/junit/4.6/junit-4.6.jar"/>
-    <fileset id="junit:junit:jar" dir="/Users/ouyanglingzhi/.m2/repository/junit/junit/4.6">
+    <echo level="info" message="Loading dependency paths from file: C:\Users\mio\repo\cassandra\build\build-dependencies-sources.xml"/>
+    <property name="junit:junit:jar" value="C:\Users\mio\.m2\repository\junit\junit\4.6\junit-4.6.jar"/>
+    <fileset id="junit:junit:jar" dir="C:\Users\mio\.m2\repository\junit\junit\4.6">
       <include name="junit-4.6.jar"/>
     </fileset>
-    <property name="com.datastax.cassandra:cassandra-driver-core:jar:shaded" value="/Users/ouyanglingzhi/.m2/repository/com/datastax/cassandra/cassandra-driver-core/3.0.1/cassandra-driver-core-3.0.1-shaded.jar"/>
-    <fileset id="com.datastax.cassandra:cassandra-driver-core:jar:shaded" dir="/Users/ouyanglingzhi/.m2/repository/com/datastax/cassandra/cassandra-driver-core/3.0.1">
+    <property name="com.datastax.cassandra:cassandra-driver-core:jar:shaded" value="C:\Users\mio\.m2\repository\com\datastax\cassandra\cassandra-driver-core\3.0.1\cassandra-driver-core-3.0.1-shaded.jar"/>
+    <fileset id="com.datastax.cassandra:cassandra-driver-core:jar:shaded" dir="C:\Users\mio\.m2\repository\com\datastax\cassandra\cassandra-driver-core\3.0.1">
       <include name="cassandra-driver-core-3.0.1-shaded.jar"/>
     </fileset>
-    <property name="io.netty:netty-handler:jar" value="/Users/ouyanglingzhi/.m2/repository/io/netty/netty-handler/4.0.33.Final/netty-handler-4.0.33.Final.jar"/>
-    <fileset id="io.netty:netty-handler:jar" dir="/Users/ouyanglingzhi/.m2/repository/io/netty/netty-handler/4.0.33.Final">
+    <property name="io.netty:netty-handler:jar" value="C:\Users\mio\.m2\repository\io\netty\netty-handler\4.0.33.Final\netty-handler-4.0.33.Final.jar"/>
+    <fileset id="io.netty:netty-handler:jar" dir="C:\Users\mio\.m2\repository\io\netty\netty-handler\4.0.33.Final">
       <include name="netty-handler-4.0.33.Final.jar"/>
     </fileset>
-    <property name="io.netty:netty-buffer:jar" value="/Users/ouyanglingzhi/.m2/repository/io/netty/netty-buffer/4.0.33.Final/netty-buffer-4.0.33.Final.jar"/>
-    <fileset id="io.netty:netty-buffer:jar" dir="/Users/ouyanglingzhi/.m2/repository/io/netty/netty-buffer/4.0.33.Final">
+    <property name="io.netty:netty-buffer:jar" value="C:\Users\mio\.m2\repository\io\netty\netty-buffer\4.0.33.Final\netty-buffer-4.0.33.Final.jar"/>
+    <fileset id="io.netty:netty-buffer:jar" dir="C:\Users\mio\.m2\repository\io\netty\netty-buffer\4.0.33.Final">
       <include name="netty-buffer-4.0.33.Final.jar"/>
     </fileset>
-    <property name="io.netty:netty-common:jar" value="/Users/ouyanglingzhi/.m2/repository/io/netty/netty-common/4.0.33.Final/netty-common-4.0.33.Final.jar"/>
-    <fileset id="io.netty:netty-common:jar" dir="/Users/ouyanglingzhi/.m2/repository/io/netty/netty-common/4.0.33.Final">
+    <property name="io.netty:netty-common:jar" value="C:\Users\mio\.m2\repository\io\netty\netty-common\4.0.33.Final\netty-common-4.0.33.Final.jar"/>
+    <fileset id="io.netty:netty-common:jar" dir="C:\Users\mio\.m2\repository\io\netty\netty-common\4.0.33.Final">
       <include name="netty-common-4.0.33.Final.jar"/>
     </fileset>
-    <property name="io.netty:netty-transport:jar" value="/Users/ouyanglingzhi/.m2/repository/io/netty/netty-transport/4.0.33.Final/netty-transport-4.0.33.Final.jar"/>
-    <fileset id="io.netty:netty-transport:jar" dir="/Users/ouyanglingzhi/.m2/repository/io/netty/netty-transport/4.0.33.Final">
+    <property name="io.netty:netty-transport:jar" value="C:\Users\mio\.m2\repository\io\netty\netty-transport\4.0.33.Final\netty-transport-4.0.33.Final.jar"/>
+    <fileset id="io.netty:netty-transport:jar" dir="C:\Users\mio\.m2\repository\io\netty\netty-transport\4.0.33.Final">
       <include name="netty-transport-4.0.33.Final.jar"/>
     </fileset>
-    <property name="io.netty:netty-codec:jar" value="/Users/ouyanglingzhi/.m2/repository/io/netty/netty-codec/4.0.33.Final/netty-codec-4.0.33.Final.jar"/>
-    <fileset id="io.netty:netty-codec:jar" dir="/Users/ouyanglingzhi/.m2/repository/io/netty/netty-codec/4.0.33.Final">
+    <property name="io.netty:netty-codec:jar" value="C:\Users\mio\.m2\repository\io\netty\netty-codec\4.0.33.Final\netty-codec-4.0.33.Final.jar"/>
+    <fileset id="io.netty:netty-codec:jar" dir="C:\Users\mio\.m2\repository\io\netty\netty-codec\4.0.33.Final">
       <include name="netty-codec-4.0.33.Final.jar"/>
     </fileset>
-    <property name="com.google.guava:guava:jar" value="/Users/ouyanglingzhi/.m2/repository/com/google/guava/guava/16.0.1/guava-16.0.1.jar"/>
-    <fileset id="com.google.guava:guava:jar" dir="/Users/ouyanglingzhi/.m2/repository/com/google/guava/guava/16.0.1">
+    <property name="com.google.guava:guava:jar" value="C:\Users\mio\.m2\repository\com\google\guava\guava\16.0.1\guava-16.0.1.jar"/>
+    <fileset id="com.google.guava:guava:jar" dir="C:\Users\mio\.m2\repository\com\google\guava\guava\16.0.1">
       <include name="guava-16.0.1.jar"/>
     </fileset>
-    <property name="io.dropwizard.metrics:metrics-core:jar" value="/Users/ouyanglingzhi/.m2/repository/io/dropwizard/metrics/metrics-core/3.1.2/metrics-core-3.1.2.jar"/>
-    <fileset id="io.dropwizard.metrics:metrics-core:jar" dir="/Users/ouyanglingzhi/.m2/repository/io/dropwizard/metrics/metrics-core/3.1.2">
+    <property name="io.dropwizard.metrics:metrics-core:jar" value="C:\Users\mio\.m2\repository\io\dropwizard\metrics\metrics-core\3.1.2\metrics-core-3.1.2.jar"/>
+    <fileset id="io.dropwizard.metrics:metrics-core:jar" dir="C:\Users\mio\.m2\repository\io\dropwizard\metrics\metrics-core\3.1.2">
       <include name="metrics-core-3.1.2.jar"/>
     </fileset>
-    <property name="org.slf4j:slf4j-api:jar" value="/Users/ouyanglingzhi/.m2/repository/org/slf4j/slf4j-api/1.7.12/slf4j-api-1.7.12.jar"/>
-    <fileset id="org.slf4j:slf4j-api:jar" dir="/Users/ouyanglingzhi/.m2/repository/org/slf4j/slf4j-api/1.7.12">
+    <property name="org.slf4j:slf4j-api:jar" value="C:\Users\mio\.m2\repository\org\slf4j\slf4j-api\1.7.12\slf4j-api-1.7.12.jar"/>
+    <fileset id="org.slf4j:slf4j-api:jar" dir="C:\Users\mio\.m2\repository\org\slf4j\slf4j-api\1.7.12">
       <include name="slf4j-api-1.7.12.jar"/>
     </fileset>
-    <property name="org.eclipse.jdt.core.compiler:ecj:jar" value="/Users/ouyanglingzhi/.m2/repository/org/eclipse/jdt/core/compiler/ecj/4.4.2/ecj-4.4.2.jar"/>
-    <fileset id="org.eclipse.jdt.core.compiler:ecj:jar" dir="/Users/ouyanglingzhi/.m2/repository/org/eclipse/jdt/core/compiler/ecj/4.4.2">
+    <property name="org.eclipse.jdt.core.compiler:ecj:jar" value="C:\Users\mio\.m2\repository\org\eclipse\jdt\core\compiler\ecj\4.4.2\ecj-4.4.2.jar"/>
+    <fileset id="org.eclipse.jdt.core.compiler:ecj:jar" dir="C:\Users\mio\.m2\repository\org\eclipse\jdt\core\compiler\ecj\4.4.2">
       <include name="ecj-4.4.2.jar"/>
     </fileset>
-    <property name="org.caffinitas.ohc:ohc-core:jar" value="/Users/ouyanglingzhi/.m2/repository/org/caffinitas/ohc/ohc-core/0.4.3/ohc-core-0.4.3.jar"/>
-    <fileset id="org.caffinitas.ohc:ohc-core:jar" dir="/Users/ouyanglingzhi/.m2/repository/org/caffinitas/ohc/ohc-core/0.4.3">
+    <property name="org.caffinitas.ohc:ohc-core:jar" value="C:\Users\mio\.m2\repository\org\caffinitas\ohc\ohc-core\0.4.3\ohc-core-0.4.3.jar"/>
+    <fileset id="org.caffinitas.ohc:ohc-core:jar" dir="C:\Users\mio\.m2\repository\org\caffinitas\ohc\ohc-core\0.4.3">
       <include name="ohc-core-0.4.3.jar"/>
     </fileset>
-    <property name="net.java.dev.jna:jna:jar" value="/Users/ouyanglingzhi/.m2/repository/net/java/dev/jna/jna/4.1.0/jna-4.1.0.jar"/>
-    <fileset id="net.java.dev.jna:jna:jar" dir="/Users/ouyanglingzhi/.m2/repository/net/java/dev/jna/jna/4.1.0">
+    <property name="net.java.dev.jna:jna:jar" value="C:\Users\mio\.m2\repository\net\java\dev\jna\jna\4.1.0\jna-4.1.0.jar"/>
+    <fileset id="net.java.dev.jna:jna:jar" dir="C:\Users\mio\.m2\repository\net\java\dev\jna\jna\4.1.0">
       <include name="jna-4.1.0.jar"/>
     </fileset>
-    <property name="org.openjdk.jmh:jmh-core:jar" value="/Users/ouyanglingzhi/.m2/repository/org/openjdk/jmh/jmh-core/1.1.1/jmh-core-1.1.1.jar"/>
-    <fileset id="org.openjdk.jmh:jmh-core:jar" dir="/Users/ouyanglingzhi/.m2/repository/org/openjdk/jmh/jmh-core/1.1.1">
+    <property name="org.openjdk.jmh:jmh-core:jar" value="C:\Users\mio\.m2\repository\org\openjdk\jmh\jmh-core\1.1.1\jmh-core-1.1.1.jar"/>
+    <fileset id="org.openjdk.jmh:jmh-core:jar" dir="C:\Users\mio\.m2\repository\org\openjdk\jmh\jmh-core\1.1.1">
       <include name="jmh-core-1.1.1.jar"/>
     </fileset>
-    <property name="net.sf.jopt-simple:jopt-simple:jar" value="/Users/ouyanglingzhi/.m2/repository/net/sf/jopt-simple/jopt-simple/4.6/jopt-simple-4.6.jar"/>
-    <fileset id="net.sf.jopt-simple:jopt-simple:jar" dir="/Users/ouyanglingzhi/.m2/repository/net/sf/jopt-simple/jopt-simple/4.6">
+    <property name="net.sf.jopt-simple:jopt-simple:jar" value="C:\Users\mio\.m2\repository\net\sf\jopt-simple\jopt-simple\4.6\jopt-simple-4.6.jar"/>
+    <fileset id="net.sf.jopt-simple:jopt-simple:jar" dir="C:\Users\mio\.m2\repository\net\sf\jopt-simple\jopt-simple\4.6">
       <include name="jopt-simple-4.6.jar"/>
     </fileset>
-    <property name="org.apache.commons:commons-math3:jar" value="/Users/ouyanglingzhi/.m2/repository/org/apache/commons/commons-math3/3.2/commons-math3-3.2.jar"/>
-    <fileset id="org.apache.commons:commons-math3:jar" dir="/Users/ouyanglingzhi/.m2/repository/org/apache/commons/commons-math3/3.2">
+    <property name="org.apache.commons:commons-math3:jar" value="C:\Users\mio\.m2\repository\org\apache\commons\commons-math3\3.2\commons-math3-3.2.jar"/>
+    <fileset id="org.apache.commons:commons-math3:jar" dir="C:\Users\mio\.m2\repository\org\apache\commons\commons-math3\3.2">
       <include name="commons-math3-3.2.jar"/>
     </fileset>
-    <property name="org.openjdk.jmh:jmh-generator-annprocess:jar" value="/Users/ouyanglingzhi/.m2/repository/org/openjdk/jmh/jmh-generator-annprocess/1.1.1/jmh-generator-annprocess-1.1.1.jar"/>
-    <fileset id="org.openjdk.jmh:jmh-generator-annprocess:jar" dir="/Users/ouyanglingzhi/.m2/repository/org/openjdk/jmh/jmh-generator-annprocess/1.1.1">
+    <property name="org.openjdk.jmh:jmh-generator-annprocess:jar" value="C:\Users\mio\.m2\repository\org\openjdk\jmh\jmh-generator-annprocess\1.1.1\jmh-generator-annprocess-1.1.1.jar"/>
+    <fileset id="org.openjdk.jmh:jmh-generator-annprocess:jar" dir="C:\Users\mio\.m2\repository\org\openjdk\jmh\jmh-generator-annprocess\1.1.1">
       <include name="jmh-generator-annprocess-1.1.1.jar"/>
     </fileset>
-    <property name="net.ju-n.compile-command-annotations:compile-command-annotations:jar" value="/Users/ouyanglingzhi/.m2/repository/net/ju-n/compile-command-annotations/compile-command-annotations/1.2.0/compile-command-annotations-1.2.0.jar"/>
-    <fileset id="net.ju-n.compile-command-annotations:compile-command-annotations:jar" dir="/Users/ouyanglingzhi/.m2/repository/net/ju-n/compile-command-annotations/compile-command-annotations/1.2.0">
+    <property name="net.ju-n.compile-command-annotations:compile-command-annotations:jar" value="C:\Users\mio\.m2\repository\net\ju-n\compile-command-annotations\compile-command-annotations\1.2.0\compile-command-annotations-1.2.0.jar"/>
+    <fileset id="net.ju-n.compile-command-annotations:compile-command-annotations:jar" dir="C:\Users\mio\.m2\repository\net\ju-n\compile-command-annotations\compile-command-annotations\1.2.0">
       <include name="compile-command-annotations-1.2.0.jar"/>
     </fileset>
-    <property name="org.apache.ant:ant-junit:jar" value="/Users/ouyanglingzhi/.m2/repository/org/apache/ant/ant-junit/1.9.4/ant-junit-1.9.4.jar"/>
-    <fileset id="org.apache.ant:ant-junit:jar" dir="/Users/ouyanglingzhi/.m2/repository/org/apache/ant/ant-junit/1.9.4">
+    <property name="org.apache.ant:ant-junit:jar" value="C:\Users\mio\.m2\repository\org\apache\ant\ant-junit\1.9.4\ant-junit-1.9.4.jar"/>
+    <fileset id="org.apache.ant:ant-junit:jar" dir="C:\Users\mio\.m2\repository\org\apache\ant\ant-junit\1.9.4">
       <include name="ant-junit-1.9.4.jar"/>
     </fileset>
-    <property name="org.apache.ant:ant:jar" value="/Users/ouyanglingzhi/.m2/repository/org/apache/ant/ant/1.9.4/ant-1.9.4.jar"/>
-    <fileset id="org.apache.ant:ant:jar" dir="/Users/ouyanglingzhi/.m2/repository/org/apache/ant/ant/1.9.4">
+    <property name="org.apache.ant:ant:jar" value="C:\Users\mio\.m2\repository\org\apache\ant\ant\1.9.4\ant-1.9.4.jar"/>
+    <fileset id="org.apache.ant:ant:jar" dir="C:\Users\mio\.m2\repository\org\apache\ant\ant\1.9.4">
       <include name="ant-1.9.4.jar"/>
     </fileset>
-    <property name="org.apache.ant:ant-launcher:jar" value="/Users/ouyanglingzhi/.m2/repository/org/apache/ant/ant-launcher/1.9.4/ant-launcher-1.9.4.jar"/>
-    <fileset id="org.apache.ant:ant-launcher:jar" dir="/Users/ouyanglingzhi/.m2/repository/org/apache/ant/ant-launcher/1.9.4">
+    <property name="org.apache.ant:ant-launcher:jar" value="C:\Users\mio\.m2\repository\org\apache\ant\ant-launcher\1.9.4\ant-launcher-1.9.4.jar"/>
+    <fileset id="org.apache.ant:ant-launcher:jar" dir="C:\Users\mio\.m2\repository\org\apache\ant\ant-launcher\1.9.4">
       <include name="ant-launcher-1.9.4.jar"/>
     </fileset>
-    <fileset id="build-dependency-sources" dir="/Users/ouyanglingzhi/.m2/repository">
-      <include name="com/datastax/cassandra/cassandra-driver-core/3.0.1/cassandra-driver-core-3.0.1-sources.jar"/>
-      <include name="com/google/guava/guava/16.0.1/guava-16.0.1-sources.jar"/>
-      <include name="io/dropwizard/metrics/metrics-core/3.1.2/metrics-core-3.1.2-sources.jar"/>
-      <include name="io/netty/netty-buffer/4.0.33.Final/netty-buffer-4.0.33.Final-sources.jar"/>
-      <include name="io/netty/netty-codec/4.0.33.Final/netty-codec-4.0.33.Final-sources.jar"/>
-      <include name="io/netty/netty-common/4.0.33.Final/netty-common-4.0.33.Final-sources.jar"/>
-      <include name="io/netty/netty-handler/4.0.33.Final/netty-handler-4.0.33.Final-sources.jar"/>
-      <include name="io/netty/netty-transport/4.0.33.Final/netty-transport-4.0.33.Final-sources.jar"/>
-      <include name="junit/junit/4.6/junit-4.6-sources.jar"/>
-      <include name="net/java/dev/jna/jna/4.1.0/jna-4.1.0-sources.jar"/>
-      <include name="net/ju-n/compile-command-annotations/compile-command-annotations/1.2.0/compile-command-annotations-1.2.0-sources.jar"/>
-      <include name="net/sf/jopt-simple/jopt-simple/4.6/jopt-simple-4.6-sources.jar"/>
-      <include name="org/apache/ant/ant-junit/1.9.4/ant-junit-1.9.4-sources.jar"/>
-      <include name="org/apache/ant/ant-launcher/1.9.4/ant-launcher-1.9.4-sources.jar"/>
-      <include name="org/apache/ant/ant/1.9.4/ant-1.9.4-sources.jar"/>
-      <include name="org/apache/commons/commons-math3/3.2/commons-math3-3.2-sources.jar"/>
-      <include name="org/caffinitas/ohc/ohc-core/0.4.3/ohc-core-0.4.3-sources.jar"/>
-      <include name="org/eclipse/jdt/core/compiler/ecj/4.4.2/ecj-4.4.2-sources.jar"/>
-      <include name="org/openjdk/jmh/jmh-core/1.1.1/jmh-core-1.1.1-sources.jar"/>
-      <include name="org/openjdk/jmh/jmh-generator-annprocess/1.1.1/jmh-generator-annprocess-1.1.1-sources.jar"/>
-      <include name="org/slf4j/slf4j-api/1.7.12/slf4j-api-1.7.12-sources.jar"/>
+    <fileset id="build-dependency-sources" dir="C:\Users\mio\.m2\repository">
+      <include name="com\datastax\cassandra\cassandra-driver-core\3.0.1\cassandra-driver-core-3.0.1-sources.jar"/>
+      <include name="com\google\guava\guava\16.0.1\guava-16.0.1-sources.jar"/>
+      <include name="io\dropwizard\metrics\metrics-core\3.1.2\metrics-core-3.1.2-sources.jar"/>
+      <include name="io\netty\netty-buffer\4.0.33.Final\netty-buffer-4.0.33.Final-sources.jar"/>
+      <include name="io\netty\netty-codec\4.0.33.Final\netty-codec-4.0.33.Final-sources.jar"/>
+      <include name="io\netty\netty-common\4.0.33.Final\netty-common-4.0.33.Final-sources.jar"/>
+      <include name="io\netty\netty-handler\4.0.33.Final\netty-handler-4.0.33.Final-sources.jar"/>
+      <include name="io\netty\netty-transport\4.0.33.Final\netty-transport-4.0.33.Final-sources.jar"/>
+      <include name="junit\junit\4.6\junit-4.6-sources.jar"/>
+      <include name="net\java\dev\jna\jna\4.1.0\jna-4.1.0-sources.jar"/>
+      <include name="net\ju-n\compile-command-annotations\compile-command-annotations\1.2.0\compile-command-annotations-1.2.0-sources.jar"/>
+      <include name="net\sf\jopt-simple\jopt-simple\4.6\jopt-simple-4.6-sources.jar"/>
+      <include name="org\apache\ant\ant-junit\1.9.4\ant-junit-1.9.4-sources.jar"/>
+      <include name="org\apache\ant\ant-launcher\1.9.4\ant-launcher-1.9.4-sources.jar"/>
+      <include name="org\apache\ant\ant\1.9.4\ant-1.9.4-sources.jar"/>
+      <include name="org\apache\commons\commons-math3\3.2\commons-math3-3.2-sources.jar"/>
+      <include name="org\caffinitas\ohc\ohc-core\0.4.3\ohc-core-0.4.3-sources.jar"/>
+      <include name="org\eclipse\jdt\core\compiler\ecj\4.4.2\ecj-4.4.2-sources.jar"/>
+      <include name="org\openjdk\jmh\jmh-core\1.1.1\jmh-core-1.1.1-sources.jar"/>
+      <include name="org\openjdk\jmh\jmh-generator-annprocess\1.1.1\jmh-generator-annprocess-1.1.1-sources.jar"/>
+      <include name="org\slf4j\slf4j-api\1.7.12\slf4j-api-1.7.12-sources.jar"/>
     </fileset>
   </target>
 </project>
