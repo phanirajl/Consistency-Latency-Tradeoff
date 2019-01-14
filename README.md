@@ -1,9 +1,9 @@
 # Consistency-Latency-Tradeoff实验配置
 本实验主要包括两部分：
 
-1. 在单机上搭建Cassandra集群以模拟一个多数据中心的分布式存储环境
-2. 运行YCSB生成不同负载条件下的trace
+1. 实验环境搭建：在单机上搭建Cassandra集群以模拟一个多数据中心的分布式存储环境
 
+2. 􏳦􏲒 实验运行：通过脚本文件运行多个YCSB实例，生成不同负载条件下的trace运行记录，对运行记录进行数据处理与分析，得到最终可视化结果。
 
 
 ## 实验环境：Cassandra集群搭建
@@ -120,9 +120,9 @@
 
 
 
-此外，可通过直接运行以下命令自动化上述全过程（Step1～3）：
+此外，可通过直接运行以下命令自动化上述 Step1～3：
 
-`./auto_Exec.sh info`
+`./auto_Exec.sh {info}`
 
 此时，会根据当前系统时间*current_time*在*bin*目录下创建名为*current_time_info*的文件夹用以存放数据信息和实验结果。
 
